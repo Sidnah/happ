@@ -1,1 +1,20 @@
-<p>PUTE</p>
+<div class="container">
+	<h1>Welcome on HAPP</h1>
+	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>
+	<p>Already an account ? <a href="users/sign_in">Login</a></p>
+	<a href="users/sign_out" data-method="delete">Log out</a>
+
+
+<h3>Our great Happers</h3>
+<ul>
+	<% @Happers.each do |happer| %>
+	<li>
+		#<%= happer.id %>
+		- <%= happer.email %>
+		- Happername : <%= happer.happername %>
+		- <%= happer.full_name %>
+	</li>
+	<% end %>
+</ul>
+
+</div>
