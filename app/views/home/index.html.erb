@@ -5,14 +5,14 @@
 	<a href="users/sign_out" data-method="delete">Log out</a>
 
 
-<h3>Our great Happers</h3>
+<h3>Early adopters</h3>
 <ul>
 	<% @Happers.each do |happer| %>
 	<li>
+		<a href="users/show/<%= happer.id%>">
 		#<%= happer.id %>
 		- <%= happer.email %>
-		- Happername : <%= happer.happername %>
-		- <%= happer.full_name %>
+	</a>
 	</li>
 	<% end %>
 </ul>
