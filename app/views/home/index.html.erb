@@ -4,7 +4,7 @@
 	<div class="top"></div>
 	
 	<section>
-		<h1><!-- <img src="../assets/images/icons/Logo_HAPP.svg" alt="Logo" > --><%= image_tag("icons/Logo_HAPP.svg")%></h1>
+		<h1><%= image_tag("icons/Logo_HAPP.svg")%></h1>
 		<p>Instant short messaging from space and above</p>
 
 			<ul>
@@ -17,23 +17,24 @@
 			</ul>
 
 			<a href="users/sign_out" data-method="delete">Log out</a>
+			<a href="users/show.html.erb">PAGE USER</a>
 		</section>
 	<footer class="home1">
 		<p>Made with love by <a href="#">Arthur <span>Guillermin hazan</span></a> & <a href="#">Helen <span>Pruvot</span></a></p>
 	</footer>
 
 
-<h3>Early adopters</h3>
-<ul>
-	<% @Happers.each do |happer| %>
-	<li>
-		<a href="users/show/<%= happer.id%>">
-		#<%= happer.id %>
-		- <%= happer.email %>
-	</a>
-	</li>
-	<% end %>
-</ul>
+	<h3>Early adopters</h3>
+	<ul>
+		<% @Happers.each do |happer| %>
+		<li>
+			<a href="users/show/<%= happer.id%>">
+			#<%= happer.id %>
+			- <%= happer.email %>
+		</a>
+		</li>
+		<% end %>
+	</ul>
 
 </div>
 
