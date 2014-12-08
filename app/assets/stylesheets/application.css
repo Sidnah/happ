@@ -126,8 +126,8 @@ nav ul li.right{
 	float : right;}
 
 nav ul li.right input{
-	width : 215px;
-	height : 64px;
+	width : 219px;
+	height : 70px;
 	background : #FFFFFF url('icons/Arrow.svg') no-repeat 20px 26px;
 	background-size : 13px 15px;
 	font-family: 'Open Sans';
@@ -136,16 +136,23 @@ nav ul li.right input{
 	text-transform: uppercase;
 	color: #B4BBC2;
 	line-height: 20px;
-	padding-left : 50px;}
+	padding-left : 50px;
+	border :0;}
 
 
 aside.user{
 	width : 288px;
+	padding-bottom : 100%;
 	background-image: -webkit-linear-gradient(#414345 0%, #232526 100%);
 	background-image: -o-linear-gradient(#414345 0%, #232526 100%);
 	background-image: linear-gradient(#414345 0%, #232526 100%);
-	padding : 43px 20px 50px 40px;
+	/*padding : 43px 20px 50px 40px;*/
 	float:left;}
+
+aside.user div.profile_content{
+	/*padding : 43px 20px 50px 40px;*/
+	/*padding-top : 40px;*/
+}
 
 	aside.user img{
 		float : left;
@@ -171,13 +178,13 @@ aside.user{
 		font-style :italic;
 		margin-bottom :30px;}
 
-	aside.user ul li{
+	aside.user div.profile_content ul li{
 		display :inline-block;
 		margin-right :35px;}
 
 
 		/* PAGE USER */
-		aside.user.profile ul li:nth-child(1){
+		aside.user.profile  div.profile_content ul li:nth-child(1){
 			margin-left : 25px;
 		}
 		/* FIN PAGE USER */
@@ -200,6 +207,22 @@ aside.user{
 		font-size: 20px;
 		color: #EC4746;
 		line-height: 27px;}
+
+	aside.user.profile ul.gallery{
+		float:left;
+		margin-top : 50px;
+	}
+
+	aside.user.profile ul.gallery li{
+		display:inline;
+		margin : 0;
+	}
+
+		aside.user.profile ul.gallery li img{
+			margin : 0;
+			width : 116px;
+			float : left;
+		}
 
 /* HOMEPAGE CENTER */
 /*body.homepage*/div.homepage section{
@@ -346,8 +369,9 @@ aside.right_side ul li img{
 /** PROFILE **/
 aside.user.profile{
 	text-align:center;
-	width:308px;
-	padding : 43px 20px 50px 20px;
+	width:348px;
+	/*padding : 43px 20px 50px 20px;*/
+	padding-top : 50px;
 }
 
 aside.user.profile img{
