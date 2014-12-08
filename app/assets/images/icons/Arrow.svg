@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="11px" height="14px" viewBox="0 0 11 14" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>Arrow</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Main_View" sketch:type="MSArtboardGroup" transform="translate(-1124.000000, -29.000000)" fill="#B4BBC2">
+            <g id="HEADER" sketch:type="MSLayerGroup">
+                <g id="Arrow-+-SEARCH" transform="translate(1124.000000, 26.000000)" sketch:type="MSShapeGroup">
+                    <g id="Arrow" transform="translate(0.000000, 3.444444)">
+                        <path d="M7.25507029,10.1168642 L8.77413718,12.2863166 C9.07895055,12.7216352 9.67533534,12.8299588 10.1129675,12.5235255 C10.5475697,12.2192137 10.6497103,11.6152347 10.347971,11.1843063 L8.8151131,8.99515837 C8.36708688,9.45778449 7.83948173,9.83946023 7.25507029,10.1168642 Z" id="Rectangle-3"></path>
+                        <path d="M9.60648148,4.91898148 C9.60648148,2.20230302 7.45599735,0 4.80324074,0 C2.15048413,0 0,2.20230302 0,4.91898148 C0,7.63565994 2.15048413,9.83796296 4.80324074,9.83796296 C7.45599735,9.83796296 9.60648148,7.63565994 9.60648148,4.91898148 Z M1.82125714,4.91898148 C1.82125714,3.19795619 3.16635684,1.82044444 4.80324074,1.82044444 C6.44012464,1.82044444 7.78522434,3.19795619 7.78522434,4.91898148 C7.78522434,6.64000678 6.44012464,8.01751852 4.80324074,8.01751852 C3.16635684,8.01751852 1.82125714,6.64000678 1.82125714,4.91898148 Z" id="Oval-2"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

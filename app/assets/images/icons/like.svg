@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="15px" height="11px" viewBox="0 0 15 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>like</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Main_View" sketch:type="MSArtboardGroup" transform="translate(-966.000000, -1208.000000)" fill="#C4C4C4">
+            <g id="CENTER" sketch:type="MSLayerGroup" transform="translate(369.000000, 103.000000)">
+                <g id="Tweet4" transform="translate(0.000000, 944.000000)" sketch:type="MSShapeGroup">
+                    <g id="Icons" transform="translate(523.000000, 161.000000)">
+                        <path d="M87.7703488,0.904078914 C86.3122093,-0.301359638 83.9488372,-0.301359638 82.4906977,0.904078914 L81.5,1.72279028 L80.5093023,0.904078914 C79.0511628,-0.301359638 76.6877907,-0.301359638 75.2296512,0.904078914 C73.5901163,2.26053121 73.5901163,4.45926622 75.2296512,5.81571852 L81.5,11 L87.7703488,5.81571852 C89.4098837,4.45926622 89.4098837,2.26053121 87.7703488,0.904078914" id="like"></path>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

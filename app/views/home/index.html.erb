@@ -1,8 +1,26 @@
+
 <div class="container">
-	<h1>Welcome on HAPP</h1>
-	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>
-	<p>Already an account ? <a href="users/sign_in">Login</a></p>
-	<a href="users/sign_out" data-method="delete">Log out</a>
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<div class="top"></div>
+	
+	<section>
+		<h1><!-- <img src="../assets/images/icons/Logo_HAPP.svg" alt="Logo" > --><%= image_tag("icons/Logo_HAPP.svg")%></h1>
+		<p>Instant short messaging from space and above</p>
+
+			<ul>
+				<li class="buttons">
+					<a href="users/sign_in" id="log">Log in</a>
+				</li>
+				<li class="buttons">
+					<a href="users/sign_up" id="sign">Sign in</a>
+				</li>
+			</ul>
+
+			<a href="users/sign_out" data-method="delete">Log out</a>
+		</section>
+	<footer class="home1">
+		<p>Made with love by <a href="#">Arthur <span>Guillermin hazan</span></a> & <a href="#">Helen <span>Pruvot</span></a></p>
+	</footer>
 
 
 <h3>Early adopters</h3>
@@ -18,3 +36,34 @@
 </ul>
 
 </div>
+
+<!-- <div class="container">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<h1>Welcome on HAPP</h1>
+
+	<ul>
+		<li class="buttons">
+			<a href="users/sign_in" id="log">Log in</a>
+		</li>
+		<li class="buttons">
+			<a href="users/sign_up" id="sign">Sign in</a>
+		</li>
+	</ul>
+
+	<a href="users/sign_out" data-method="delete">Log out</a>
+
+
+<h3>Early adopters</h3>
+<ul>
+	<% @Happers.each do |happer| %>
+	<li>
+		<a href="users/show/<%= happer.id%>">
+		#<%= happer.id %>
+		- <%= happer.email %>
+	</a>
+	</li>
+	<% end %>
+</ul>
+
+</div> -->
+
