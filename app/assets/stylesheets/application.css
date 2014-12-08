@@ -101,7 +101,7 @@ div.top{
   text-decoration: underline;}
 
 /* HOMEPAGE USER*/
-body.homepage{
+/*body.homepage*/div.homepage{
 	background-color: #F6F6F6;
 }
 
@@ -192,11 +192,11 @@ aside.user{
 		line-height: 27px;}
 
 /* HOMEPAGE CENTER */
-body.homepage section{
+/*body.homepage*/div.homepage section{
 	float : left;
 }
 
-body.homepage section div.post{
+/*body.homepage*/div.homepage section div.post{
 	background: #FFFFFF url('icons/icon_pen2.svg') no-repeat 35px 40px;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	font-family: 'Open Sans';
@@ -208,11 +208,11 @@ body.homepage section div.post{
 	width: 700px;
 	margin : 30px 30px 60px 30px;}
 
-	body.homepage section div.post p{
+	/*body.homepage*/div.homepage section div.post p{
 		margin-left:100px;
 		padding-top :38px;}
 
-body.homepage section div.feed{
+/*body.homepage*/div.homepage section div.feed{
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height:100%;
@@ -220,7 +220,7 @@ body.homepage section div.feed{
 	width :620px;
 	padding:70px 40px;}
 
-	body.homepage section div.feed span.letters{
+	/*body.homepage*/div.homepage section div.feed span.letters{
 		font-family: 'Raleway';
 		color:#fff;
 		padding : 20px;
@@ -232,7 +232,7 @@ body.homepage section div.feed{
 		margin-right:40px;
 		margin-bottom:40px;}
 
-	body.homepage section div.feed p.text,body.homepage section div.feed span.author, body.homepage section div.feed span.date{
+	/*body.homepage*/div.homepage section div.feed p.text,/*body.homepage*/div.homepage section div.feed span.author, /*body.homepage*/div.homepage section div.feed span.date{
 		font-family: 'Open Sans';
 		font-size: 12px;
 		color: #9B9B9B;
@@ -242,20 +242,20 @@ body.homepage section div.feed{
 		margin-bottom : 15px;
 	}
 
-		body.homepage section div.feed span.hashtag{
+		/*body.homepage*/div.homepage section div.feed span.hashtag{
 			color:#EC4746;
 			font-weight :600;
 		}
 
-		body.homepage section div.feed span.author, body.homepage section div.feed span.date{
+		/*body.homepage*/div.homepage section div.feed span.author, /*body.homepage*/div.homepage section div.feed span.date{
 			font-weight : 600;
 			padding-top : 30px;
 		}
 
-	body.homepage section div.feed ul{
+	/*body.homepage*/div.homepage section div.feed ul{
 		float:right;
 	}
-		body.homepage section div.feed ul li{
+		/*body.homepage*/div.homepage section div.feed ul li{
 			float :left;
 			padding-right:30px;
 		}
@@ -323,10 +323,15 @@ aside.right_side ul li img{
 		padding: 5px 10px 5px 23px;
 		border: 1px solid #EC4746;
 		border-radius: 3px;
-		background :#FFFFFF url('../images/icons/icon_add.svg') no-repeat 5px 6px;
+		background :#FFFFFF url('icons/icon_add.svg') no-repeat 5px 6px;
 		position:absolute;
 		margin-top : 4px;
 		margin-left : 35px;}
+
+		aside.right_side ul li a:hover{
+			background : rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
+			cursor :pointer;
+		}
 
 /** PROFILE **/
 aside.user.profile{
