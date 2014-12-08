@@ -1,0 +1,7 @@
+<h3>Write your Happ</h3>
+
+<%= form_for @happ, url: {action: "new"} do |f| %>
+  <%= f.label :Message %> : <%= f.text_area :text %> <br/>
+  <%= f.label :Happer %> :<%= f.select :user, options_from_collection_for_select(@users, "id", "email"), :prompt => "Happer" %><br/>
+  <%= f.submit "Create" %>
+<% end %>
