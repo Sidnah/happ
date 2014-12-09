@@ -149,24 +149,15 @@ nav ul li.right input{
 aside.user{
 	width : 288px;
 	padding-bottom : 100%;
-	/*background-image: -webkit-linear-gradient(#414345 0%, #232526 100%);
-	background-image: -o-linear-gradient(#414345 0%, #232526 100%);
-	background-image: linear-gradient(#414345 0%, #232526 100%);*/
-	/*padding : 43px 20px 50px 40px;*/
 	background: url("Background.png") center fixed;
   	-webkit-background-size: cover; 
   	background-size: cover;
   	height:100%;
 	float:left;}
 
-aside.user div.profile_content{
-	/*padding : 43px 20px 50px 40px;*/
-	/*padding-top : 40px;*/
-}
-
-	aside.user img{
-		float : left;
-		margin-right : 15px;}
+aside.user img{
+	float : left;
+	margin-right : 15px;}
 
 	aside.user h2{
 		font-family : 'Open Sans';
@@ -380,7 +371,6 @@ aside.right_side ul li img{
 aside.user.profile{
 	text-align:center;
 	width:348px;
-	/*padding : 43px 20px 50px 20px;*/
 	padding-top : 50px;
 }
 
