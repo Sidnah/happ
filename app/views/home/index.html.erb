@@ -1,1 +1,43 @@
-<p>PUTE</p>
+<div class="container">
+	<h1>Welcome on HAPP</h1>
+	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>	
+
+	<% if user_signed_in? %>
+  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  <br />
+  <a href="users/edit">Account settings</a>      
+<% else %>
+   <p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
+<% end %>
+<br/>
+
+<% if @user ||= current_user %>
+
+<section class="stats">
+	<%= render 'shared/stats' %>
+</section>
+
+<% end %>
+
+<a href="posts/new">Write a Happ</a>
+
+
+<h3>Early adopters</h3>
+<ul>
+	<% @Happers.each do |happer| %>
+	<li>
+		<a href="users/show/<%= happer.id%>">
+		#<%= happer.id %>
+		- <%= happer.email %>
+	</a>
+	</li>
+	<% end %>
+</ul>
+
+<h3>Happs</h3>
+<ul>
+	<% @Happs.each do |happ| %>
+	<li><%= happ.email %> said <b><%= happ.text %></b></li>
+	<% end %>
+</ul>
+
+</div>

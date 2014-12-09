@@ -1,5 +1,18 @@
 Rails.application.routes.draw do
+  get 'posts/new'
+
+  get 'posts/create'
+
+  get 'posts/index'
+
+  get 'posts/show'
+
   devise_for :users
+
+
+  get 'users/:id/following', :to => 'users#following', as: 'following_user'
+  get 'users/:id/followers', :to => 'users#followers', as: 'followers_user'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -8,6 +21,10 @@ Rails.application.routes.draw do
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
+
+  get 'users/show/:id' => 'users#show'
+
+  resources :relationships, only: [:create, :destroy]
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
@@ -54,4 +71,7 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+
+
+  resources :posts
 end
