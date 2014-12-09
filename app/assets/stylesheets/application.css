@@ -38,6 +38,11 @@ div.top{
 	background : #FFFFFF url("icons/Logo_circle.svg") no-repeat center 15px;
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);}
 
+	header{
+		position : relative;
+		z-index :5;
+	}
+
 /*body.home1*/div.container section{width : 250px; margin : 200px auto;}
 
 /*body.home1*/div.container section p{
@@ -127,8 +132,8 @@ nav ul li.right{
 
 nav ul li.right input{
 	width : 219px;
-	height : 70px;
-	background : #FFFFFF url('icons/Arrow.svg') no-repeat 20px 26px;
+	height : 68px;
+	background : #FFFFFF url('icons/Arrow.svg') no-repeat 20px 28px;
 	background-size : 13px 15px;
 	font-family: 'Open Sans';
 	font-size: 15px;
@@ -137,7 +142,8 @@ nav ul li.right input{
 	color: #B4BBC2;
 	line-height: 20px;
 	padding-left : 50px;
-	border :0;}
+	border :0;
+	outline : 0;}
 
 
 aside.user{
