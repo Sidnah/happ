@@ -6,5 +6,12 @@
 	<b>Connections</b> <%= @happer.sign_in_count %><br />
 	<b>Joined</b> <%= @happer.created_at %>
 </p>
+
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
+
+<%= render 'follow_form' if user_signed_in? %>
+
 <a href="../edit">Account settings</a>
 <a href="http://localhost:3000/">Home</a>
