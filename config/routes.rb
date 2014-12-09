@@ -4,6 +4,11 @@ Rails.application.routes.draw do
   get 'posts/index'
 
   devise_for :users
+
+
+  get 'users/:id/following', :to => 'users#following', as: 'following_user'
+  get 'users/:id/followers', :to => 'users#followers', as: 'followers_user'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
@@ -18,6 +23,9 @@ Rails.application.routes.draw do
   get 'posts/show/:id' => 'posts#show'
 
   get 'posts/delete/:id' => 'posts#delete', as:"post_delete"
+
+  resources :relationships, only: [:create, :destroy]
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

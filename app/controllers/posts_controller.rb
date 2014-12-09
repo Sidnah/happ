@@ -1,13 +1,9 @@
 class PostsController < ApplicationController
 
-   def index
-   	@Happs = Post.all
-   end
-
-  # def new
-  # 	@users = User.all
-  # 	@happ = Post.new
-  # end
+  def index
+  	@Happs = Post.all
+    @user = current_user
+  end
 
    def show
    	@happ = Post.find(params[:id])
