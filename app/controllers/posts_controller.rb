@@ -4,6 +4,7 @@ class PostsController < ApplicationController
 
   def index
   	@Happs = Post.all
+    @user = current_user
   end
 
   def new

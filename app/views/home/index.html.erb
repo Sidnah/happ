@@ -9,6 +9,15 @@
    <p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
 <% end %>
 <br/>
+
+<% if @user ||= current_user %>
+
+<section class="stats">
+	<%= render 'shared/stats' %>
+</section>
+
+<% end %>
+
 <a href="posts/new">Write a Happ</a>
 
 
