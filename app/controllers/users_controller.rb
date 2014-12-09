@@ -3,5 +3,6 @@ class UsersController < ApplicationController
 
   def show
   	@happer = User.find(params[:id])
+	@happs = @happer.posts
   end
 end

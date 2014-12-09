@@ -24,19 +24,24 @@
 	<li>
 		<a href="users/show/<%= happer.id%>">
 		<%= happer.happername %>
-	</a>
+		</a>
 	</li>
 	<% end %>
 </ul>
 
 <h3>Happs</h3>
 <ul>
-	<% @Happs.each do |happ| %>
+	<%	@Happs.each do |happ|%>
 	<li>
-		<a href="posts/<%=happ.id%>">
-			#<%= happ.id %> <%= happ.user.happername %> <b> said </b><%= happ.text %>
-		</a>
+		<%= happ.text %> <br/>
+		<a href="../../posts/<%= happ.id %>">#<%= happ.id %></a> <%= happ.created_at %>
+		<% if user_signed_in? && happ.user_id == current_user.id %>
+			<%= link_to('Delete', post_delete_path(happ.id)) %>
+		<% end %>
+		<br/>
+		<i><%= happ.user.happername %></i>
 	</li>
+	<br />
 	<% end %>
 </ul>
 

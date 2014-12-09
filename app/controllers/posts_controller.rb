@@ -32,17 +32,24 @@ class PostsController < ApplicationController
   end
 
   def create
-  @happ = Post.new(happ_params)
-  @happ.user_id = current_user.id;
- 
-  @happ.save
-  redirect_to @happ
-end
-
-private
-  def happ_params
-    # :user_id = current_user.id
-    params.require(:post).permit(:text)
+    @happ = Post.new(happ_params)
+    @happ.user_id = current_user.id;
+   
+    @happ.save
+    redirect_to @happ
   end
+
+  def delete
+      @happs = Post.all
+      @happ = Post.find(params[:id])
+      @happ.destroy
+      redirect_to root_path
+  end
+
+  private
+    def happ_params
+      # :user_id = current_user.id
+      params.require(:post).permit(:text)
+    end
 
 end
