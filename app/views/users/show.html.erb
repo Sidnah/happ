@@ -1,13 +1,13 @@
 <h2>Profile page</h2>
 <p>
-	<b>Happername </b> <%= @happer.happername %> <br />
-	<b>Full name </b> <%= @happer.full_name %> <br />
-	<b>E-mail </b> <%= @happer.email %> <br />
-	<!--<b>Connections</b> <%= @happer.sign_in_count %><br />
-	<b>Joined</b> <%= @happer.created_at %><br />-->
+	<b>Happername </b> <%= @user.happername %> <br />
+	<b>Full name </b> <%= @user.full_name %> <br />
+	<b>E-mail </b> <%= @user.email %> <br />
+	<!--<b>Connections</b> <%= @user.sign_in_count %><br />
+	<b>Joined</b> <%= @user.created_at %><br />-->
 	
 
-	<h2>Happs de <%= @happer.happername %></h2>
+	<h2>Happs de <%= @user.happername %></h2>
 
 <ul>
 	<%	@happs.each do |happ|%>
@@ -30,7 +30,7 @@
   <%= render 'shared/stats' %>
 </section>
 
-<%= render 'follow_form' if user_signed_in? && @happer.id != current_user.id %>
+<%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
 
 <a href="../edit">Account settings</a>
 <a href="http://localhost:3000/">Home</a>
