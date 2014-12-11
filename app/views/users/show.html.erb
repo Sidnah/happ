@@ -1,13 +1,16 @@
+<!-- <h1>Profile</h1>
+
 <h2>Profile page</h2>
+ dev
 <p>
 	<b>Happername </b> <%= @user.happername %> <br />
 	<b>Full name </b> <%= @user.full_name %> <br />
 	<b>E-mail </b> <%= @user.email %> <br />
-	<!--<b>Connections</b> <%= @user.sign_in_count %><br />
+	<b>Connections</b> <%= @user.sign_in_count %><br />
 	<b>Joined</b> <%= @user.created_at %><br />-->
 	
 
-	<h2>Happs de <%= @user.happername %></h2>
+	<!-- <h2>Happs de <%= @user.happername %></h2>
 
 <ul>
 	<%	@happs.each do |happ|%>
@@ -24,7 +27,107 @@
 	<% end %>
 </ul>
 
-</p>
+</p> 
+
+<a href="http://localhost:3000/">Home</a>-->
+<div class="homepage">
+	<header>
+		<nav class="top">
+			<ul>
+				<li><a href="homepage.html"><!-- <img src="../assets/images/icons/House.svg" alt="Home"> --><%= image_tag("icons/House.svg")%></a></li>
+				<li><a href="#"><!-- <img src="icons/user.svg" alt="User"> --><%= image_tag("icons/user.svg")%></a></li>
+				<li><a href="#"><!-- <img src="icons/message.svg" alt="Message"> --><%= image_tag("icons/message.svg")%></a></li>
+				<li><a href="#"><!-- <img src="icons/bullhorn.svg" alt="Bullhorn"> --><%= image_tag("icons/bullhorn.svg")%></a></li>
+				<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
+				<li class="right input"><input type="text" placeholder="search"></li>
+			</ul>
+		</nav>
+		<div class="top"></div>
+	</header>
+	<aside class="user profile">
+		<div class="profile_content">
+			<!-- <img src="../assets/images/picture.png" alt=""/> --><%= image_tag("picture.png")%>
+			<h2><span><%= @user.full_name %></span></h2>
+			<p class="username">@<%= @user.happername %></p>
+			<span class="line_under_username">&nbsp;</span>
+			<p class="description">Digital designer | Creative Artworker<br/>Je fais aussi du freelance, et j’ai un site internet :<br/><span class="bolder">www.arthurguillerminhazan.fr</span></p>
+			<ul>
+				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @happs.count %> </span></li>
+				<li><span class="indicator">Following</span><br/><span class="count">380</span></li>
+				<li><span class="indicator">Followers</span><br/><span class="count">789</span></li> 
+			</ul>
+			<% if current_user != @user %>
+			<a href="" class="side_profile_follow">Follow</a>
+			<% end %>
+		</div>
+		<ul class="gallery">
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+		</ul>
+	</aside>
+
+	<section>
+		<div class="post">
+			<p>What's happening?</p>
+		</div>
+		
+
+
+
+			<%	@happs.each do |happ|%>
+			<div class="feed">
+				<span class="letters">AG</span>
+				<p class="text"><%= happ.text %> </p>
+				<span class="author"><%=happ.user.happername %> |</span><span class="date"> <%= happ.created_at %></span>
+			
+
+			
+			
+			<ul>
+				<li><a href="#"><!-- <img src="icons/respond.svg" alt="Answer"> --><%= image_tag("icons/respond.svg")%></a></li>
+				<li><a href="#"><!-- <img src="icons/retweet.svg" alt="RT"> --><%= image_tag("icons/retweet.svg")%></a></li>
+				<li><a href="#"><!-- <img src="icons/like.svg" alt="Like"> --><%= image_tag("icons/like.svg")%></a></li>
+			</ul>
+		</div>
+		<% end %>
+		
+		
+	</section>
+
+	<aside class="right_side">
+		<article>
+			<h3>Trending topic</h3>
+			<ul>
+				<li class="trending">#LucasFPD</li>
+				<li class="trending">#ManuVelma</li>
+				<li class="trending">#ArthurPasDrole</li>
+				<li class="trending">#GrosBabache</li>
+				<li class="trending">#HeleneBonhomme</li>
+			</ul>
+		</article>
+		<article>
+			<h3>Who to follow ?</h3>
+			<ul>
+				<%@users.each do |user| %>
+				<li class="wtf">
+					<!-- <img src="../assets/images/photo_tweet.svg" alt=""> -->
+					<%= image_tag("Photo_tweet.svg")%>
+					<p><%= user.full_name %><br/>
+					<span class="pseudo">@<%= user.happername %></span></p>
+					<a href="#">Follow</a>
+				</li>
+				<% end %>
+			</ul>
+		</article>
+	</aside>
+</div>
 
 <section class="stats">
   <%= render 'shared/stats' %>
@@ -34,3 +137,4 @@
 
 <a href="../edit">Account settings</a>
 <a href="http://localhost:3000/">Home</a>
+
