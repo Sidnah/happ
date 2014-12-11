@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="12px" height="11px" viewBox="0 0 12 11" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>icon_add</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Main_View" sketch:type="MSArtboardGroup" transform="translate(-1338.000000, -365.000000)" fill="#EC4746">
+            <g id="SIDEBAR_RIGHT" sketch:type="MSLayerGroup" transform="translate(1104.000000, 70.000000)">
+                <g id="Who-To-Follow" transform="translate(20.000000, 253.000000)" sketch:type="MSShapeGroup">
+                    <g id="Follow_01" transform="translate(0.000000, 32.000000)">
+                        <g id="Follow-btn" transform="translate(205.000000, 0.000000)">
+                            <path d="M19.2,14.8888889 L19.2,13.0555556 L18,13.0555556 L18,14.8888889 L16.2,14.8888889 L16.2,16.1111111 L18,16.1111111 L18,17.9444444 L19.2,17.9444444 L19.2,16.1111111 L21,16.1111111 L21,14.8888889 L19.2,14.8888889 L19.2,14.8888889 Z M16.4262,18.2182222 C14.93136,17.6692 14.45376,17.2059778 14.45376,16.2143889 C14.45376,15.6190444 14.91,15.8133778 15.1104,14.7232778 C15.19368,14.2710556 15.59676,14.7159444 15.67392,13.6835333 C15.67392,13.2721333 15.45384,13.1698333 15.45384,13.1698333 C15.45384,13.1698333 15.56556,12.5609222 15.60948,12.0923222 C15.66384,11.5084667 15.2748,10 13.2,10 C11.12532,10 10.73628,11.5084667 10.79064,12.0923222 C10.83444,12.5609222 10.94628,13.1698333 10.94628,13.1698333 C10.94628,13.1698333 10.7262,13.2721333 10.7262,13.6835333 C10.80336,14.7159444 11.20644,14.2710556 11.28948,14.7232778 C11.49,15.8133778 11.94636,15.6190444 11.94636,16.2143889 C11.94636,17.2059778 11.46876,17.6692 9.97392,18.2182222 C9.79392,18.2842222 9.36468,18.3868889 9,18.5473667 L9,21 L18.6,21 L18.6,19.7134889 C18.6,19.3305667 17.92572,18.7688333 16.4262,18.2182222 L16.4262,18.2182222 Z" id="icon_add"></path>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

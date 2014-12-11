@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="25px" height="23px" viewBox="0 0 25 23" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>House</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Main_View" sketch:type="MSArtboardGroup" transform="translate(-31.000000, -24.000000)" fill="#FFFFFF">
+            <g id="HEADER" sketch:type="MSLayerGroup">
+                <g id="ICONS_Header" transform="translate(31.000000, 0.000000)" sketch:type="MSShapeGroup">
+                    <path d="M24.6808654,35.9293254 L13.5361375,24.45579 C12.9666785,23.84807 12.0333215,23.84807 11.4638625,24.45579 L0.319134645,35.9293254 C-0.250324282,36.5367597 -0.0364299532,37.0344786 0.791368878,37.0344786 L3.11642801,37.0344786 L3.11642801,45.8459892 C3.11642801,46.4834238 3.14142865,47 4.26090156,47 L9.66937245,47 L9.66937245,38.1630605 L15.3306275,38.1630605 L15.3306275,47 L21.0085497,47 C21.8613492,47 21.8863498,46.4834238 21.8863498,45.8459892 L21.8863498,37.0344786 L24.2086311,37.0344786 C25.03643,37.0344786 25.2503243,36.5367597 24.6808654,35.9293254" id="House"></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
