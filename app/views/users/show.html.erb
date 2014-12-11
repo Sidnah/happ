@@ -1,11 +1,34 @@
 <!-- <h1>Profile</h1>
+=======
+<h2>Profile page</h2>
+>>>>>>> dev
 <p>
-	<b>Happername </b> <%= @happer.happername %> <br />
-	<b>Full name </b> <%= @happer.full_name %> <br />
-	<b>E-mail </b> <%= @happer.email %> <br />
-	<b>Connections</b> <%= @happer.sign_in_count %><br />
-	<b>Joined</b> <%= @happer.created_at %>
+	<b>Happername </b> <%= @user.happername %> <br />
+	<b>Full name </b> <%= @user.full_name %> <br />
+	<b>E-mail </b> <%= @user.email %> <br />
+	<!--<b>Connections</b> <%= @user.sign_in_count %><br />
+	<b>Joined</b> <%= @user.created_at %><br />-->
+	
+
+	<h2>Happs de <%= @user.happername %></h2>
+
+<ul>
+	<%	@happs.each do |happ|%>
+	<li>
+		<%= happ.text %> <br/>
+		<a href="../../posts/<%= happ.id %>">#<%= happ.id %></a> <%= happ.created_at %>
+		<% if user_signed_in? && happ.user_id == current_user.id %>
+			<%= link_to('Delete', post_delete_path(happ.id)) %>
+		<% end %>
+		<br/>
+		<i><%= happ.user.happername %></i>
+	</li>
+	<br />
+	<% end %>
+</ul>
+
 </p>
+
 <a href="http://localhost:3000/">Home</a> -->
 <div class="homepage">
 	<header>
@@ -145,3 +168,13 @@
 		</article>
 	</aside>
 </div>
+
+<section class="stats">
+  <%= render 'shared/stats' %>
+</section>
+
+<%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
+
+<a href="../edit">Account settings</a>
+<a href="http://localhost:3000/">Home</a>
+

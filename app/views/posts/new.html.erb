@@ -1,0 +1,20 @@
+<h3>Write your Happ</h3>
+
+<% if user_signed_in? %>
+
+	<b> you are <%= @logged.happername %><b>
+
+	<%= form_for :post, url: posts_path do |f| %>
+	  <p>
+	    <%= f.label :text %><br>
+	    <%= f.text_field :text %>
+	  </p>
+
+	  <p>
+	    <%= f.submit %>
+	  </p>
+	<% end %>
+
+<% else %>
+	<p> You need to <%= link_to('login', new_user_session_path)  %>.<p>
+<% end %>

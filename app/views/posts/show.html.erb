@@ -1,0 +1,13 @@
+<h1>Happ</h1>
+<p>single post show</p>
+<ul>
+	<li>
+		<%= @happ.text %> <br/>
+		<a href="../../posts/<%= @happ.id %>">#<%= @happ.id %></a> <%= @happ.created_at %>
+		<% if user_signed_in? && @happ.user_id == current_user.id %>
+		<%= link_to('Delete', post_delete_path(@happ.id)) %><br/>
+		<i><%= @happ.user.happername %></i>
+	</li>
+	<% end %>
+</ul>
+
