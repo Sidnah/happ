@@ -31,12 +31,10 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
-group :development, :test do # <<<< :development, not devlopment
-  gem 'sqlite3'
-end
-
-group :production do
-  gem 'pg'
+gem 'sqlite3', :group => [:development, :test] 
+group :production do 
+	gem 'thin' 
+	gem 'pg' 
 end
 
 # Use ActiveModel has_secure_password
