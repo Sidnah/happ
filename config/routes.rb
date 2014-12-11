@@ -18,7 +18,7 @@ Rails.application.routes.draw do
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
-  get 'users/show/:id' => 'users#show'
+  get 'users/show/:id' => 'users#show', as:"show_user"
 
   get 'posts/show/:id' => 'posts#show'
 

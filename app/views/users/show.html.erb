@@ -18,7 +18,7 @@
 			<%= link_to('Delete', post_delete_path(happ.id)) %>
 		<% end %>
 		<br/>
-		<i><%= happ.user.happername %></i>
+		<i><%= link_to(happ.user.happername, show_user_path(happ.user_id)) %></i>
 	</li>
 	<br />
 	<% end %>

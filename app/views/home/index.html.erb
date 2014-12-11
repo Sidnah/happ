@@ -7,13 +7,13 @@
 
 	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  <br />
 
-	<a href="users/edit">Account settings</a>
+	<%= link_to('Account settings', edit_user_registration_path) %>  <br />
 
 	<h3><a href="posts/new">Write a Happ</a></h3>   
 
 	<% else %>
 
-	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>
+	<p>New user ? <%= link_to("Create an account", new_user_registration_path) %><br /></p>
 	<p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
 	<% end %>
 	<br/>
@@ -49,7 +49,7 @@
 			<%= link_to('Delete', post_delete_path(happ.id)) %>
 		<% end %>
 		<br/>
-		<i><%= happ.user.happername %></i>
+		<i><i><%= link_to(happ.user.happername, show_user_path(happ.user_id)) %></i></i>
 	</li>
 	<br />
 	<% end %>
