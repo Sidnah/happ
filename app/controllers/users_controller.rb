@@ -3,7 +3,8 @@ class UsersController < ApplicationController
 	before_filter :authenticate_user!
 
   def show
-  	@happer = User.find(params[:id])
+  	@user = User.find(params[:id])
+	@happs = @user.posts
   end
 
 end

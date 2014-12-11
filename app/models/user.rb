@@ -33,6 +33,5 @@ class User < ActiveRecord::Base
     following.include?(other_user)
   end
 
-  
 
 end

@@ -1,11 +1,7 @@
 Rails.application.routes.draw do
-  get 'posts/new'
 
-  get 'posts/create'
 
   get 'posts/index'
-
-  get 'posts/show'
 
   devise_for :users
 
@@ -24,7 +20,12 @@ Rails.application.routes.draw do
 
   get 'users/show/:id' => 'users#show'
 
+  get 'posts/show/:id' => 'posts#show'
+
+  get 'posts/delete/:id' => 'posts#delete', as:"post_delete"
+
   resources :relationships, only: [:create, :destroy]
+
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
   #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase

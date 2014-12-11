@@ -1,14 +1,23 @@
 <div class="container">
-	<h1>Welcome on HAPP</h1>
-	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>	
+	<h1>Welcome on HAPP</h1>	
 
 	<% if user_signed_in? %>
-  <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  <br />
-  <a href="users/edit">Account settings</a>      
-<% else %>
-   <p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
-<% end %>
-<br/>
+
+	<h3>You are logged as <%= current_user.happername %></h3>
+
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  <br />
+
+	<a href="users/edit">Account settings</a>
+
+	<h3><a href="posts/new">Write a Happ</a></h3>   
+
+	<% else %>
+
+	<p>New user ? <a href="users/sign_up">Create an account</a><br /></p>
+	<p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
+	<% end %>
+	<br/>
+
 
 <% if @user ||= current_user %>
 
@@ -18,25 +27,31 @@
 
 <% end %>
 
-<a href="posts/new">Write a Happ</a>
-
 
 <h3>Early adopters</h3>
 <ul>
 	<% @Happers.each do |happer| %>
 	<li>
 		<a href="users/show/<%= happer.id%>">
-		#<%= happer.id %>
-		- <%= happer.email %>
-	</a>
+		<%= happer.happername %>
+		</a>
 	</li>
 	<% end %>
 </ul>
 
 <h3>Happs</h3>
 <ul>
-	<% @Happs.each do |happ| %>
-	<li><%= happ.email %> said <b><%= happ.text %></b></li>
+	<%	@Happs.each do |happ|%>
+	<li>
+		<%= happ.text %> <br/>
+		<a href="../../posts/<%= happ.id %>">#<%= happ.id %></a> <%= happ.created_at %>
+		<% if user_signed_in? && happ.user_id == current_user.id %>
+			<%= link_to('Delete', post_delete_path(happ.id)) %>
+		<% end %>
+		<br/>
+		<i><%= happ.user.happername %></i>
+	</li>
+	<br />
 	<% end %>
 </ul>
 
