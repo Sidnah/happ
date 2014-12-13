@@ -6,7 +6,7 @@
     <div class="wrapper create_account">
       <div class="bloc">
         <p>Sign up</p>
-        <form action="post">
+        
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
           <ul>  
@@ -33,7 +33,6 @@
             <%= f.submit "Sign up" %>
           </div>
           <% end %>
-        </form>
       </div>
     </div>
     <div class="actions">
