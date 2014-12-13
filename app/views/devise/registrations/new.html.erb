@@ -6,7 +6,11 @@
     <div class="wrapper create_account">
       <div class="bloc">
         <p>Sign up</p>
+<<<<<<< HEAD
         
+=======
+        <form action="post">
+>>>>>>> Page create account
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
           <ul>  
@@ -33,12 +37,20 @@
             <%= f.submit "Sign up" %>
           </div>
           <% end %>
+<<<<<<< HEAD
       </div>
     </div>
     <div class="actions">
       <ul>
       <%= render "devise/shared/links" %>
       </ul>
+=======
+        </form>
+      </div>
+    </div>
+    <div class="actions">
+      <%= render "devise/shared/links" %>
+>>>>>>> Page create account
     </div>
   </section>
 </div>
