@@ -55,7 +55,7 @@
 
 		<section>
 			<div class="post">
-				<p>What's happening?</p>
+				<%= render 'posts/new' %>
 			</div>
 
 			<% @posts.each do |happ|%>
@@ -64,10 +64,13 @@
 					<p class="text"><%= happ.text %> </p>
 					<span class="author"> <%= link_to(happ.user.happername, show_user_path(happ.user.id)) %>|</span><span class="date"> <%= happ.created_at %></span>
 					<ul>
-						<li><a href="#"><!-- <img src="icons/respond.svg" alt="Answer"> --><%= image_tag("icons/respond.svg")%></a></li>
-						<li><a href="#"><!-- <img src="icons/retweet.svg" alt="RT"> --><%= image_tag("icons/retweet.svg")%></a></li>
-						<li><a href="#"><!-- <img src="icons/like.svg" alt="Like"> --><%= image_tag("icons/like.svg")%></a></li>
-						<% if current_user.id==happ.user.id %><li><%= link_to(image_tag("icons/like.svg"), post_delete_path(happ.id)) %></li><% end %>
+						<li><%= link_to(image_tag("icons/respond.svg")) %></li>
+						<li><%= link_to(image_tag("icons/like.svg")) %></li>
+						<% if current_user.id==happ.user.id %>
+							<li><%= link_to(image_tag("icons/trash.svg"), post_delete_path(happ.id)) %></li>
+						<% else %>
+							<li><a href="#"><%= image_tag("icons/retweet.svg")%></a></li>
+						<% end %>
 					</ul>
 				</div>
 			<% end %>
@@ -88,6 +91,7 @@
 			<article>
 				<h3>Who to follow ?</h3>
 				<ul>
+					<% @users=@users.reject{ |u| u.id==current_user.id } %>
 					<% @users.each do |user| %>
 						<li class="wtf">
 							<%= image_tag("Photo_tweet.svg")%>

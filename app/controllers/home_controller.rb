@@ -9,8 +9,8 @@ class HomeController < ActionController::Base
 			@posts = @posts.reverse
 			@user = current_user
 			
-			else
-				redirect_to user_session_path	
+		else
+			redirect_to user_session_path	
 		end
 	
 	end

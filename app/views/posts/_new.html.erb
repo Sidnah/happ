@@ -1,16 +1,8 @@
-<h3>Write your Happ</h3>
-
 <% if user_signed_in? %>
-
-	<b> you are <%= @logged.happername %><b>
 
 	<%= form_for :post, url: posts_path do |f| %>
 	  <p>
-	    <%= f.label :text %><br>
-	    <%= f.text_field :text %>
-	  </p>
-
-	  <p>
+	    <%= f.text_area :text, :placeholder => 'What\'s happening ?' %>
 	    <%= f.submit %>
 	  </p>
 	<% end %>
