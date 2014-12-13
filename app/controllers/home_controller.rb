@@ -8,6 +8,7 @@ class HomeController < ActionController::Base
 			@posts = Post.all
 			@posts = @posts.reverse
 			@user = current_user
+			@feed_items = current_user.feed
 			
 		else
 			redirect_to user_session_path	

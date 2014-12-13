@@ -510,6 +510,10 @@ aside.user.profile a.side_profile_follow:hover {
 		height : 500px;
 	}
 
+		div.wrapper.create_account + div.actions ul li{
+			width : 100%;
+		}
+
 	div.wrapper.new_password{
 		height : 220px;
 	}
