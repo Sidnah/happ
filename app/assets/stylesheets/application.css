@@ -175,7 +175,6 @@ div.container  section ul li a#sign, div.container section div.actions a.sign {
 	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);
 }
 
-
 div.container  section ul li.buttons a#log:hover, div.container section div.actions a.log:hover {
 	background: rgba(255,255,255,0.5);
 	cursor: pointer;
