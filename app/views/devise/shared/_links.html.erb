@@ -1,11 +1,17 @@
 <%- if controller_name != 'sessions' %>
 <<<<<<< HEAD
+<<<<<<< HEAD
 	<li>
   	<%= link_to "Log in", new_session_path(resource_name), :class => 'log' %><br />
   	</li>
 =======
   <%= link_to "Log in", new_session_path(resource_name), :class => 'log' %><br />
 >>>>>>> Page create account
+=======
+	<li>
+  	<%= link_to "Log in", new_session_path(resource_name), :class => 'log' %><br />
+  	</li>
+>>>>>>> Page new_password
 <% end -%>
 
 <%- if devise_mapping.registerable? && controller_name != 'registrations' %>

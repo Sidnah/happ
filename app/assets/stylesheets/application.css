@@ -193,6 +193,7 @@ div.container  section ul li.buttons a.log{
 
 div.container section div.actions a.log{
 	border: 1px solid #FFFFFF;
+
 }
 
 
@@ -788,6 +789,7 @@ aside.user.profile a.side_profile_follow:hover {
 <<<<<<< HEAD
 	}
 
+<<<<<<< HEAD
 		div.wrapper.create_account + div.actions ul li{
 			width : 100%;
 		}
@@ -821,6 +823,8 @@ div.container div.wrapper p, div.wrapper.create_account em {
 =======
 	}
 
+=======
+>>>>>>> Page new_password
 	div.wrapper.new_password{
 		height : 220px;
 	}
