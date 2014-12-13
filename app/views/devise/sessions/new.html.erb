@@ -6,7 +6,6 @@
     <div class="wrapper">
       <div class="bloc"></div>
       <p>Log in</p>
-      <form action="post">
         <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <ul>
           <li>
@@ -26,7 +25,6 @@
           </li>
           <% end %>
         </ul>
-      </form>
     </div>
     <div class="actions">
       <ul>
