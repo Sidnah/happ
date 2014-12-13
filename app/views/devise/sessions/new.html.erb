@@ -3,6 +3,7 @@
   <section>
     <h1><%= image_tag("icons/Logo_HAPP.svg")%></h1>
     <p class="base">Instant short messaging from space and above</p>
+<<<<<<< HEAD
     <div class="wrapper">
       <div class="bloc"></div>
       <p>Log in</p>
@@ -25,6 +26,34 @@
           </li>
           <% end %>
         </ul>
+=======
+    
+    <div id="wrapper">
+      <div class="bloc"></div> 
+      <p>Log in</p>
+
+      <form action="post">
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+          <ul>
+            <li>
+                <%= f.email_field :email, autofocus: true, :required => true, :placeholder => 'EMAIL' %>
+            </li>
+
+            <li>
+                <%= f.password_field :password, autocomplete: "off", :required => true, :placeholder => 'PASSWORD' %>
+            </li>
+            <li>
+              <% if devise_mapping.rememberable? -%>
+                  <%= f.check_box :remember_me %>
+                  <%= f.label :remember_me, :class => 'remember' %>
+              <% end -%>
+            </li>
+            <li>
+              <%= f.submit "Log in" %>
+            </li>
+        <% end %>
+      </form>
+>>>>>>> Sign_in
     </div>
     <div class="actions">
       <ul>
