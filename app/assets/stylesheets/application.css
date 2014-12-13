@@ -43,9 +43,13 @@ div.top{
 		z-index :5;
 	}
 
-/*body.home1*/div.container section{width : 250px; margin : 200px auto;}
+div.container h1{
+	text-align :center;
+}
 
-/*body.home1*/div.container section p{
+div.container section{width : 325px; margin : 200px auto;}
+
+div.container section p{
 	opacity: 0.89;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -55,9 +59,24 @@ div.top{
 	text-align: center;
 	margin-bottom : 45px;}
 
-/*body.home1*/div.container  section ul li{float : left;}
+	div.container p.base{
+		width : 200px;
+		margin : 0 auto 45px;
+	}
 
-/*body.home1*/div.container  section ul li a{
+	label.remember{
+		opacity: 0.89;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 14px;
+		color: #545454;
+		line-height: 19px;
+		text-align: center;
+		margin-bottom : 15px;
+	}
+
+div.container section ul li{float : left;}
+
+div.container  section ul li a, div.container section div.actions a{
 	font-family : 'Open Sans', sans-serif;
 	font-weight: 300;
 	color : #FFFFFF;
@@ -66,24 +85,24 @@ div.top{
 	text-decoration: none;
 	background: rgba(0,0,0,0.15);
 	border-radius: 15px;
-	padding : 6px 40px;}
+	padding : 6px 30px;}
 
-/*body.home1*/div.container  section ul li.buttons a#log{ margin-right : 17px; border: 1px solid #FFFFFF;}
+div.container  section ul li.buttons a.log,div.container section div.actions a.log{ margin-right : 17px; border: 1px solid #FFFFFF;}
 
-/*body.home1*/div.container  section ul li a#sign{background-image: linear-gradient(-180deg, #EF4847 0%, #9E2720 100%);box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);}
+div.container  section ul li a#sign, div.container section div.actions a.sign{background-image: linear-gradient(-180deg, #EF4847 0%, #9E2720 100%);box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);}
 
 
-/*body.home1*/div.container  section ul li.buttons a#log:hover{
+div.container  section ul li.buttons a#log:hover, div.container section div.actions a.log:hover{
   background: rgba(255,255,255,0.5);
   cursor: pointer;}
 
-/*body.home1*/div.container  section ul li.buttons a#sign:hover{
+div.container  section ul li.buttons a#sign:hover, div.container section div.actions a.sign:hover{
   background-image: linear-gradient(-180deg, #EF4847 100%, #9E2720 0%);
   cursor: pointer;}
 
 
-/*body.home1*/div.container footer {
-  position: absolute;
+div.container footer {
+  /*position: absolute;*/
   left: 0;
   bottom: 0;
   height: 30px;
@@ -97,16 +116,16 @@ div.top{
   line-height: 17px;
   text-shadow: 0px 1px 2px rgba(0,0,0,0.50);}
 
-/*body.home1*/div.container footer span{
+div.container footer span{
   font-weight: 600;
   text-transform: uppercase;}
 
-/*body.home1*/div.container footer a{
+div.container footer a{
   margin-bottom:4px;
   text-decoration: underline;}
 
 /* HOMEPAGE USER*/
-/*body.homepage*/div.homepage{
+div.homepage{
 	background-color: #F6F6F6;
 }
 
@@ -226,11 +245,11 @@ aside.user img{
 		}
 
 /* HOMEPAGE CENTER */
-/*body.homepage*/div.homepage section{
+div.homepage section{
 	float : left;
 }
 
-/*body.homepage*/div.homepage section div.post{
+div.homepage section div.post{
 	background: #FFFFFF url('icons/icon_pen2.svg') no-repeat 35px 40px;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	font-family: 'Open Sans';
@@ -242,11 +261,11 @@ aside.user img{
 	width: 700px;
 	margin : 30px 30px 60px 30px;}
 
-	/*body.homepage*/div.homepage section div.post p{
+	div.homepage section div.post p{
 		margin-left:100px;
 		padding-top :38px;}
 
-/*body.homepage*/div.homepage section div.feed{
+div.homepage section div.feed{
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height:100%;
@@ -254,7 +273,7 @@ aside.user img{
 	width :620px;
 	padding:70px 40px;}
 
-	/*body.homepage*/div.homepage section div.feed span.letters{
+	div.homepage section div.feed span.letters{
 		font-family: 'Raleway';
 		color:#fff;
 		padding : 20px;
@@ -266,7 +285,7 @@ aside.user img{
 		margin-right:40px;
 		margin-bottom:40px;}
 
-	/*body.homepage*/div.homepage section div.feed p.text,/*body.homepage*/div.homepage section div.feed span.author, /*body.homepage*/div.homepage section div.feed span.date{
+	div.homepage section div.feed p.text,div.homepage section div.feed span.author, div.homepage section div.feed span.date{
 		font-family: 'Open Sans';
 		font-size: 12px;
 		color: #9B9B9B;
@@ -276,20 +295,20 @@ aside.user img{
 		margin-bottom : 15px;
 	}
 
-		/*body.homepage*/div.homepage section div.feed span.hashtag{
+		div.homepage section div.feed span.hashtag{
 			color:#EC4746;
 			font-weight :600;
 		}
 
-		/*body.homepage*/div.homepage section div.feed span.author, /*body.homepage*/div.homepage section div.feed span.date{
+		div.homepage section div.feed span.author, div.homepage section div.feed span.date{
 			font-weight : 600;
 			padding-top : 30px;
 		}
 
-	/*body.homepage*/div.homepage section div.feed ul{
+	div.homepage section div.feed ul{
 		float:right;
 	}
-		/*body.homepage*/div.homepage section div.feed ul li{
+		div.homepage section div.feed ul li{
 			float :left;
 			padding-right:30px;
 		}
@@ -427,3 +446,136 @@ aside.user.profile a.side_profile_follow{
 		cursor: pointer;
 		background: rgba(255,255,255,0.60);
 	}
+
+/** WRAPPER **/
+#wrapper {
+  display: block;
+  width: 325px;
+  height: 280px;
+  background: #FFFFFF;
+  box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.50);
+  border-radius: 5px;
+  top: 123px;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+div.container #wrapper p{
+  font-weight: 400;
+  text-shadow: none;
+  font-size: 14px;
+  color: #303030;
+  line-height: 19px;
+  padding-top: 25px;
+  padding-bottom: 10px;
+  margin-bottom : 5px;
+}
+
+div.container form{
+	text-align : center;
+}
+
+div.container #wrapper form ul li{
+	float : none;
+}
+
+form input[type="email"]{
+  margin-top: 10px
+}
+
+form input[type="email"], form input[type="password"], form input[type="mail"] {
+  width: 200px;
+  height: 40px;
+  background: #F4F4F4;
+  border: 0.5px solid #DEDEDE;
+  border-radius: 40px;
+  text-align: center;
+  margin-bottom: 22px;
+  font-family: 'Open Sans', arial, sans-serif !important;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  color: #CFCFCF;
+  letter-spacing: 1px;
+
+
+}
+
+  form input[type="button"]{
+    color: #FFF;
+    font-family: 'Open Sans', arial, sans-serif !important;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    background: rgba(0,0,0,0.15);
+    border: 1px solid #FFFFFF;
+    border-radius: 15px;
+    padding-bottom: 7px;
+    padding-top: 9px;
+    padding-left: 21px;
+    padding-right: 17px;
+  }
+
+  form input[type="submit"]{
+
+    color: #FFF;
+    font-family: 'Open Sans', arial, sans-serif !important;
+    font-size: 12px;
+    font-weight: 300;
+    line-height: 17px;
+    background-image: linear-gradient(-180deg, #EF4847 0%, #9E2720 100%);
+    box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);
+    border-radius: 15px;
+    padding-bottom: 7px;
+    padding-top: 9px;
+    padding-left: 25px;
+    padding-right: 25px;
+    border: none;
+    display: inline;
+  }
+
+  form input:focus{
+    outline: 0;
+  }
+
+input:focus::-webkit-input-placeholder { color:transparent; }
+
+hr{
+  width: 45px;
+  margin-top: 5px;
+  border: 0;
+  height: 0.5px;
+  background-color: rgba(0,0,0,0.3);
+}
+
+
+.bloc {
+  width: 100%;
+  height: 10px;
+  background: #EF4847;
+  border-radius: 5px 5px 0px 0px;
+}
+.inline li {
+  display: inline;
+  padding-top: 35px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+.inline {
+  margin-top: 35px;
+}
+
+  form input[type="submit"]:before{
+    content:"";
+    background-image: ('icons/arrow.svg') no-repeat;
+    width: 3px;
+    height: 3px;
+    display: block;
+  }
+
+  div.container div.actions{
+  	margin-top : 30px;
+  	margin-left : 4px;
+  }
