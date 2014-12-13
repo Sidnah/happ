@@ -22,7 +22,11 @@ class PostsController < ApplicationController
     @post.user_id = current_user.id;
    
     @post.save
+
+    @feed_items = []
+    
     redirect_to @post
+
   end
 
   def delete
