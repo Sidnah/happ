@@ -53,8 +53,11 @@
 			<p class="description">Digital designer | Creative Artworker<br/>Je fais aussi du freelance, et j’ai un site internet :<br/><span class="bolder">www.arthurguillerminhazan.fr</span></p>
 			<ul>
 				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @happs.count %> </span></li>
-				<li><span class="indicator">Following</span><br/><span class="count">380</span></li>
-				<li><span class="indicator">Followers</span><br/><span class="count">789</span></li> 
+				<% if user_signed_in? %>
+					<% if @user ||= current_user %>
+						<%= render 'shared/stats' %>
+					<% end %>
+				<% end %>
 			</ul>
 			<% if current_user != @user %>
 			<a href="" class="side_profile_follow">Follow</a>

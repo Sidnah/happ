@@ -24,12 +24,35 @@
 
 	<% if user_signed_in? %>
 
-	<% if @user ||= current_user %>
-
-	<%= render 'shared/stats' %>
-
-
-<% end %>
+		<aside class="user profile">
+		<div class="profile_content">
+			<!-- <img src="../assets/images/picture.png" alt=""/> --><%= image_tag("picture.png")%>
+			<h2><span><%= @user.full_name %></span></h2>
+			<p class="username">@<%= @user.happername %></p>
+			<span class="line_under_username">&nbsp;</span>
+			<p class="description">Digital designer | Creative Artworker<br/>Je fais aussi du freelance, et j’ai un site internet :<br/><span class="bolder">www.arthurguillerminhazan.fr</span></p>
+			<ul>
+				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @Happs.count %> </span></li>
+				<% if @user ||= current_user %>
+					<%= render 'shared/stats' %>
+				<% end %>
+			</ul>
+			<% if current_user != @user %>
+			<a href="" class="side_profile_follow">Follow</a>
+			<% end %>
+		</div>
+		<ul class="gallery">
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+			<li><%= image_tag("Photo_01.png")%></li>
+		</ul>
+	</aside>
 
 	<h3>You are logged as <%= current_user.happername %></h3>
 
