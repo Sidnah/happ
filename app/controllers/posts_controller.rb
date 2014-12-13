@@ -26,10 +26,12 @@ class PostsController < ApplicationController
   end
 
   def delete
+      session[:return_to] ||= request.referer
       @posts = Post.all
       @post = Post.find(params[:id])
       @post.destroy
-      redirect_to root_path
+      #redirect_to root_path
+      redirect_to session.delete(:return_to)
   end
 
   private

@@ -6,6 +6,7 @@ class HomeController < ActionController::Base
 
 			@users = User.all
 			@posts = Post.all
+			@posts = @posts.reverse
 			@user = current_user
 			
 			else
