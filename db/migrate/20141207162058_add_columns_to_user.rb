@@ -4,6 +4,7 @@ class AddColumnsToUser < ActiveRecord::Migration
       # if you already have a email column, you have to comment the below line and add the :encrypted_password column manually (see devise/schema.rb).
       t.string :happername, null: false, default: ""
       t.string :full_name,  null: false, default: ""
+      t.string :bio,  null: false, default: "CECI EST MA BIO DE FOU"
     end
   end
 end

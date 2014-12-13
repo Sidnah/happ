@@ -1,7 +1,7 @@
 <h1>All happs</h1>
 <p>All happs</p>
 <ul>
-	<% @Happs.each do |happ| %>
+	<% @posts.each do |happ| %>
 	<li>#<%= happ.id %> <%= happ.user.happername %> <b> POSTS INDEX </b><%= happ.text %></li>
 	<% end %>
 </ul>

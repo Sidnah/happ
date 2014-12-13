@@ -1,43 +1,11 @@
-<!-- <h1>Profile</h1>
-
-<h2>Profile page</h2>
- dev
-<p>
-	<b>Happername </b> <%= @user.happername %> <br />
-	<b>Full name </b> <%= @user.full_name %> <br />
-	<b>E-mail </b> <%= @user.email %> <br />
-	<b>Connections</b> <%= @user.sign_in_count %><br />
-	<b>Joined</b> <%= @user.created_at %><br />-->
-	
-
-	<!-- <h2>Happs de <%= @user.happername %></h2>
-
-<ul>
-	<%	@happs.each do |happ|%>
-	<li>
-		<%= happ.text %> <br/>
-		<a href="../../posts/<%= happ.id %>">#<%= happ.id %></a> <%= happ.created_at %>
-		<% if user_signed_in? && happ.user_id == current_user.id %>
-			<%= link_to('Delete', post_delete_path(happ.id)) %>
-		<% end %>
-		<br/>
-		<i><%= link_to(happ.user.happername, show_user_path(happ.user_id)) %></i>
-	</li>
-	<br />
-	<% end %>
-</ul>
-
-</p> 
-
-<a href="http://localhost:3000/">Home</a>-->
 <div class="homepage">
 	<header>
 		<nav class="top">
 			<ul>
-				<li><a href="homepage.html"><!-- <img src="../assets/images/icons/House.svg" alt="Home"> --><%= image_tag("icons/House.svg")%></a></li>
-				<li><a href="#"><!-- <img src="icons/user.svg" alt="User"> --><%= image_tag("icons/user.svg")%></a></li>
-				<li><a href="#"><!-- <img src="icons/message.svg" alt="Message"> --><%= image_tag("icons/message.svg")%></a></li>
-				<li><a href="#"><!-- <img src="icons/bullhorn.svg" alt="Bullhorn"> --><%= image_tag("icons/bullhorn.svg")%></a></li>
+				<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
+				<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
+				<li><%= link_to(image_tag("icons/message.svg"), edit_user_registration_path) %></li>
+				<li><%= link_to(image_tag("icons/bullhorn.svg"), destroy_user_session_path) %></li>
 				<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
 				<li class="right input"><input type="text" placeholder="search"></li>
 			</ul>
@@ -52,7 +20,7 @@
 			<span class="line_under_username">&nbsp;</span>
 			<p class="description">Digital designer | Creative Artworker<br/>Je fais aussi du freelance, et j’ai un site internet :<br/><span class="bolder">www.arthurguillerminhazan.fr</span></p>
 			<ul>
-				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @happs.count %> </span></li>
+				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @posts.count %> </span></li>
 				<% if user_signed_in? %>
 					<% if @user ||= current_user %>
 						<%= render 'shared/stats' %>
@@ -80,28 +48,21 @@
 		<div class="post">
 			<p>What's happening?</p>
 		</div>
-		
 
-
-
-			<%	@happs.each do |happ|%>
+		<%	@posts.each do |happ|%>
 			<div class="feed">
 				<span class="letters">AG</span>
 				<p class="text"><%= happ.text %> </p>
 				<span class="author"><%=happ.user.happername %> |</span><span class="date"> <%= happ.created_at %></span>
-			
-
-			
-			
-			<ul>
-				<li><a href="#"><!-- <img src="icons/respond.svg" alt="Answer"> --><%= image_tag("icons/respond.svg")%></a></li>
-				<li><a href="#"><!-- <img src="icons/retweet.svg" alt="RT"> --><%= image_tag("icons/retweet.svg")%></a></li>
-				<li><a href="#"><!-- <img src="icons/like.svg" alt="Like"> --><%= image_tag("icons/like.svg")%></a></li>
-			</ul>
-		</div>
+				<ul>
+					<li><a href="#"><!-- <img src="icons/respond.svg" alt="Answer"> --><%= image_tag("icons/respond.svg")%></a></li>
+					<li><a href="#"><!-- <img src="icons/retweet.svg" alt="RT"> --><%= image_tag("icons/retweet.svg")%></a></li>
+					<li><a href="#"><!-- <img src="icons/like.svg" alt="Like"> --><%= image_tag("icons/like.svg")%></a></li>
+				</ul>
+			</div>
 		<% end %>
-		
-		
+
+
 	</section>
 
 	<aside class="right_side">
@@ -120,24 +81,13 @@
 			<ul>
 				<%@users.each do |user| %>
 				<li class="wtf">
-					<!-- <img src="../assets/images/photo_tweet.svg" alt=""> -->
 					<%= image_tag("Photo_tweet.svg")%>
 					<p><%= user.full_name %><br/>
-					<span class="pseudo">@<%= user.happername %></span></p>
-					<a href="#">Follow</a>
-				</li>
-				<% end %>
-			</ul>
-		</article>
-	</aside>
-</div>
-
-<section class="stats">
-  <%= render 'shared/stats' %>
-</section>
-
-<%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
-
-<a href="../edit">Account settings</a>
-<a href="http://localhost:3000/">Home</a>
-
+						<span class="pseudo">@<%= user.happername %></span></p>
+						<%= link_to("Follow", show_user_path(user.id))%>
+					</li>
+					<% end %>
+				</ul>
+			</article>
+		</aside>
+	</div>
