@@ -1,0 +1,88 @@
+
+<div class="container">
+	<%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+	<!-- <div class="top"></div> -->
+	
+	<!-- <section>
+		<h1><%= image_tag("icons/Logo_HAPP.svg")%></h1>
+		<p>Instant short messaging from space and above</p>
+
+			<ul>
+				<li class="buttons">
+					<a href="users/sign_in" id="log">Log in</a>
+				</li>
+				<li class="buttons">
+					<a href="users/sign_up" id="sign">Sign in</a>
+				</li>
+			</ul>
+
+			<a <%= link_to('Logout', destroy_user_session_path, :method => :delete) %>>Logout</a>
+		</section>
+	<footer class="home1">
+		<p>Made with love by <a href="#">Arthur <span>Guillermin hazan</span></a> & <a href="#">Helen <span>Pruvot</span></a></p>
+	</footer> -->
+
+	<% if user_signed_in? %>
+
+		<aside class="user profile">
+		<div class="profile_content">
+			<!-- <img src="../assets/images/picture.png" alt=""/> --><%= image_tag("picture.png")%>
+			<h2><span><%= @user.full_name %></span></h2>
+			<p class="username">@<%= @user.happername %></p>
+			<span class="line_under_username">&nbsp;</span>
+			<p class="description">Digital designer | Creative Artworker<br/>Je fais aussi du freelance, et j’ai un site internet :<br/><span class="bolder">www.arthurguillerminhazan.fr</span></p>
+			<ul>
+				<li><span class="indicator">Happs</span><br/><span class="count"> <%= @Happs.count %> </span></li>
+				<% if @user ||= current_user %>
+					<%= render 'shared/stats' %>
+				<% end %>
+			</ul>
+			<% if current_user != @user %>
+			<a href="" class="side_profile_follow">Follow</a>
+			<% end %>
+		</div>
+	</aside>
+
+	<h3>You are logged as <%= current_user.happername %></h3>
+
+	<%= link_to('Logout', destroy_user_session_path, :method => :delete) %>  <br />
+
+	<%= link_to('Account settings', edit_user_registration_path) %>  <br />
+
+	<h3><a href="posts/new">Write a Happ</a></h3>   
+
+	<% else %>
+
+	<p>New user ? <%= link_to("Create an account", new_user_registration_path) %><br /></p>
+	<p>Already an account ? <%= link_to('Login', new_user_session_path)  %> </p> 
+	<% end %>
+	<br/>
+
+	<h3>Happs</h3>
+<ul>
+	<%	@Happs.each do |happ|%>
+	<li>
+		<i><%= link_to(happ.user.happername, show_user_path(happ.user_id)) %></i> said <%= happ.text %> <br/>
+		<a href="../../posts/<%= happ.id %>">#<%= happ.id %></a> <%= happ.created_at %>
+		<% if user_signed_in? && happ.user_id == current_user.id %>
+			<%= link_to('Delete', post_delete_path(happ.id)) %>
+		<% end %>
+	</li>
+	<br />
+	<% end %>
+</ul>
+
+<h3>Early adopters</h3>
+	<ul>
+		<% @Happers.each do |happer| %>
+
+			   <a href="users/show/<%= happer.id%>"> <%= happer.happername %> </a>   -
+		<% end %>
+	</ul>
+
+</div>
+
+	
+
+</div>
+
