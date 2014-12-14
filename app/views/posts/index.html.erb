@@ -1,7 +1,8 @@
 <h1>All happs</h1>
-<p>All happs</p>
-<ul>
-	<% @posts.each do |happ| %>
-	<li>#<%= happ.id %> <%= happ.user.happername %> <b> POSTS INDEX </b><%= happ.text %></li>
-	<% end %>
-</ul>
+
+<% @articles.each do |article| %>
+  <div class="article">
+    <h1 class="article-title"><%= link_to article.text, article %></h1>
+    <p class="article-content"><%= article.text %></p>
+  </div>
+<% end %>

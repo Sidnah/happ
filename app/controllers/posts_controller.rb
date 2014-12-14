@@ -4,6 +4,14 @@ class PostsController < ApplicationController
   	@posts = Post.all
     @posts = @posts.reverse
     @user = current_user
+
+    if params[:search]
+      @articles = Post.search(params[:search]).order("created_at DESC")
+    else
+      @articles = Post.order("created_at DESC")
+    end
+
+
   end
 
    def show

@@ -246,6 +246,15 @@ aside.user img{
 		margin-left:100px;
 		padding-top :38px;}
 
+	/*body.homepage*/div.homepage section div.post textarea{
+		border: none;
+		outline: none;
+		resize: none;
+		width: 80%;
+		font-size: 12px;
+		font-family: 'Open Sans';
+	}
+
 /*body.homepage*/div.homepage section div.feed{
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
@@ -253,6 +262,13 @@ aside.user img{
 	margin : -30px 30px 30px 30px;
 	width :620px;
 	padding:70px 40px;}
+
+	/*body.homepage*/div.homepage section div.feed span.author a{
+		color: #9B9B9B; 
+	}
+	/*body.homepage*/div.homepage section div.feed span.author a:hover{
+		color:#EC4746;
+	}
 
 	/*body.homepage*/div.homepage section div.feed span.letters{
 		font-family: 'Raleway';
@@ -276,14 +292,13 @@ aside.user img{
 		margin-bottom : 15px;
 	}
 
-		/*body.homepage*/div.homepage section div.feed span.hashtag{
+		/*body.homepage*/div.homepage section div.feed a.hashtag{
 			color:#EC4746;
 			font-weight :600;
 		}
 
 		/*body.homepage*/div.homepage section div.feed span.author, /*body.homepage*/div.homepage section div.feed span.date{
 			font-weight : 600;
-			padding-top : 30px;
 		}
 
 	/*body.homepage*/div.homepage section div.feed ul{
@@ -345,7 +360,7 @@ aside.right_side ul li img{
 		color : #B9B9B9;
 		}
 
-	aside.right_side ul li a{
+	aside.right_side article.recommandations ul li a{
 		/*float : right;*/
 		font-family: 'Open Sans';
 		font-size: 11px;
@@ -362,10 +377,24 @@ aside.right_side ul li img{
 		margin-top : 4px;
 		margin-left : 35px;}
 
-		aside.right_side ul li a:hover{
+		aside.right_side article.recommandations ul li a:hover{
 			background : rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
 			cursor :pointer;
 		}
+
+		aside.right_side article.trendings ul li{
+			color:#B9B9B9;
+			
+		}
+
+		aside.right_side article.trendings ul li a{
+			color:#EC4746;
+			font-weight: 600
+			
+		}
+
+
+
 
 /** PROFILE **/
 aside.user.profile{

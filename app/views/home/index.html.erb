@@ -58,10 +58,16 @@
 				<%= render 'posts/new' %>
 			</div>
 
+			<% @posts = @posts.reverse
+			#coloring hashtags
+			@posts = @posts.each do |happ|
+				happ.text.gsub!(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/){ "<a class=hashtag href=posts?utf8=✓&search="+$1+">#"+$1+"</a>" }
+			end%>
+
 			<% @posts.each do |happ|%>
 				<div class="feed">
 					<span class="letters">AG</span>
-					<p class="text"><%= happ.text %> </p>
+					<p class="text"><%= raw(happ.text) %> </p>
 					<span class="author"> <%= link_to(happ.user.happername, show_user_path(happ.user.id)) %>|</span><span class="date"> <%= happ.created_at %></span>
 					<ul>
 						<li><%= link_to(image_tag("icons/respond.svg")) %></li>
@@ -78,17 +84,18 @@
 		</section>
 
 		<aside class="right_side">
-			<article>
-				<h3>Trending topic</h3>
+			<article class="trendings">
+				<h3>Trending topics</h3>
 				<ul>
-					<li class="trending">#LucasFPD</li>
-					<li class="trending">#ManuVelma</li>
-					<li class="trending">#ArthurPasDrole</li>
-					<li class="trending">#GrosBabache</li>
-					<li class="trending">#HeleneBonhomme</li>
+					<% @sorted_hashtags.each do |key, value| %>
+						<li class="trending"><a href="posts?search=<%=key%>">#<%= key %></a> was happed <%= value %> times<br/></li>
+					<% end %>
+
+
 				</ul>
+
 			</article>
-			<article>
+			<article class="recommandations">
 				<h3>Who to follow ?</h3>
 				<ul>
 					<% @users = @users.reject{ |u| u.id==current_user.id } %>
