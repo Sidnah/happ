@@ -6,15 +6,7 @@
     <div class="wrapper create_account">
       <div class="bloc">
         <p>Sign up</p>
-<<<<<<< HEAD
-<<<<<<< HEAD
         
-=======
-        <form action="post">
->>>>>>> Page create account
-=======
-        
->>>>>>> Correct form sign up
           <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
           <%= devise_error_messages! %>
           <ul>  
@@ -37,38 +29,19 @@
               <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'PASSWORD CONFIRMATION' %>
             </li>
             <span class="picture">
-            <%= f.label :picture do %>
                 <%= f.file_field :picture %>
-                <%= f.hidden_field :picture_cache %>
-            <% end %>
             </span>
           </ul>
           <div class="actions">
-              <%= f.submit "Sign up" %>
+            <%= f.submit "Sign up" %>
           </div>
           <% end %>
-<<<<<<< HEAD
-<<<<<<< HEAD
       </div>
     </div>
     <div class="actions">
       <ul>
       <%= render "devise/shared/links" %>
       </ul>
-=======
-        </form>
-=======
->>>>>>> Correct form sign up
-      </div>
-    </div>
-    <div class="actions">
-      <ul>
-      <%= render "devise/shared/links" %>
-<<<<<<< HEAD
->>>>>>> Page create account
-=======
-      </ul>
->>>>>>> User's feed
     </div>
   </section>
 </div>
