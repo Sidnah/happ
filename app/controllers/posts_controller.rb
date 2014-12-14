@@ -31,7 +31,11 @@ class PostsController < ApplicationController
     @post = Post.new(happ_params)
     @post.user_id = current_user.id;
     @post.save
-    redirect_to session.delete(:return_to)
+
+    @feed_items = []
+    
+    redirect_to @post
+
   end
 
   def delete

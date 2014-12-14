@@ -31,6 +31,8 @@ group :development, :test do
   gem 'rspec-rails', '~> 3.0'
 end
 
+# Image upload
+gem 'carrierwave-postgresql'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

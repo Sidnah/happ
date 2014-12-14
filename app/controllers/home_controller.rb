@@ -9,7 +9,7 @@ class HomeController < ActionController::Base
 			@user = current_user
 
 			@hashtags_array = []
-			
+			@feed_items = current_user.feed
 
 			hashtags = Post.all
 			hashtags = hashtags.each do |happ|

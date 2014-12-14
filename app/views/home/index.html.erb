@@ -2,16 +2,16 @@
 <html>
 <head>
 	<title>Happ</title>
-	<link data-turbolinks-track="true" href="/assets/posts.css?body=1" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/relationships.css?body=1" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/reset-min.css?body=1" media="all" rel="stylesheet" />
-	<link data-turbolinks-track="true" href="/assets/application.css?body=1" media="all" rel="stylesheet" />
-	<script data-turbolinks-track="true" src="/assets/jquery.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/jquery_ujs.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/turbolinks.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/posts.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/relationships.js?body=1"></script>
-	<script data-turbolinks-track="true" src="/assets/application.js?body=1"></script>
+	<link data-turbolinks-track="true" href=<%= asset_path 'posts.css?body=1'%> media="all" rel="stylesheet" />
+	<link data-turbolinks-track="true" href=<%= asset_path 'relationships.css?body=1'%> media="all" rel="stylesheet" />
+	<link data-turbolinks-track="true" href=<%= asset_path 'reset-min.css?body=1'%> media="all" rel="stylesheet" />
+	<link data-turbolinks-track="true" href=<%= asset_path 'application.css?body=1'%> media="all" rel="stylesheet" />
+	<script data-turbolinks-track="true" src= <%= asset_path 'jquery.js?body=1'%></script>
+	<script data-turbolinks-track="true" src=<%= asset_path  'jquery_ujs.js?body=1'%></script>
+	<script data-turbolinks-track="true" src=<%= asset_path  'turbolinks.js?body=1'%></script>
+	<script data-turbolinks-track="true" src=<%= asset_path  'posts.js?body=1'%></script>
+	<script data-turbolinks-track="true" src=<%= asset_path  'relationships.js?body=1'%></script>
+	<script data-turbolinks-track="true" src=<%= asset_path  'application.js?body=1'%></script>
 	<meta content="authenticity_token" name="csrf-param" />
 	<meta content="Q4U78Ppo3Auho7eqovTlH67g3Lys2QsjePlMMV0Hs0A=" name="csrf-token" />
 
@@ -22,11 +22,13 @@
 	<div class="homepage">
 		<header>
 			<nav class="top">
-				<ul>
-					<li><%= link_to(image_tag("icons/house.svg"), root_path) %></li>
+				<ul class="nav">
+					<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
 					<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
-					<li><%= link_to(image_tag("icons/settings.svg"), edit_user_registration_path) %></li>
-					<li><%= link_to(image_tag("icons/logout.svg"), destroy_user_session_path) %></li>
+					<li><%= link_to(image_tag("icons/Settings.svg"), edit_user_registration_path) %></li>
+					<li><%= link_to(image_tag("icons/Logout.svg"), destroy_user_session_path) %></li>
+				</ul>
+				<ul>
 					<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
 					<li class="right input"><input type="text" placeholder="search"></li>
 				</ul>
@@ -35,7 +37,9 @@
 		</header>
 		<aside class="user profile">
 			<div class="profile_content">
-				<!-- <img src="../assets/images/picture.png" alt=""/> --><%= image_tag("picture.png")%>
+
+				<%= image_tag @user.picture.url if @user.picture? %>
+
 				<h2><span><%= @user.full_name %></span></h2>
 				<p class="username">@<%= @user.happername %></p>
 				<span class="line_under_username">&nbsp;</span>
@@ -58,13 +62,10 @@
 				<%= render 'posts/new' %>
 			</div>
 
-			<% @posts = @posts.reverse
-			#coloring hashtags
-			@posts = @posts.each do |happ|
-				happ.text.gsub!(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/){ "<a class=hashtag href=posts?utf8=✓&search="+$1+">#"+$1+"</a>" }
-			end%>
+			<% @feed_items = @feed_items.reverse
+				@feed_items.each do |happ|%>
+				<% happ.text.gsub!(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/){ "<a class=hashtag href=posts?utf8=✓&search="+$1+">#"+$1+"</a>" } %>
 
-			<% @posts.each do |happ|%>
 				<div class="feed">
 					<span class="letters">AG</span>
 					<p class="text"><%= raw(happ.text) %> </p>
@@ -91,14 +92,16 @@
 						<li class="trending"><a href="posts?search=<%=key%>">#<%= key %></a> was happed <%= value %> times<br/></li>
 					<% end %>
 
-
 				</ul>
 
 			</article>
+
 			<article class="recommandations">
-				<h3>Who to follow ?</h3>
+
+				<h3>Top Happers</h3>
 				<ul>
-					<% @users = @users.reject{ |u| u.id==current_user.id } %>
+					<% @users=@users.sort { |a,b| b.followers.count <=> a.followers.count } %>
+					<% @users=@users.reject{ |u| u.id==current_user.id } %>
 					<% @users.each do |user| %>
 						<li class="wtf">
 							<%= image_tag("Photo_tweet.svg")%>
