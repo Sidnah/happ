@@ -22,9 +22,11 @@
 	<div class="homepage">
 		<header>
 			<nav class="top">
-				<ul>
+				<ul class="nav">
 					<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
 					<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
+				</ul>
+				<ul>
 					<li><%= link_to(image_tag("icons/Settings.svg"), edit_user_registration_path) %></li>
 					<li><%= link_to(image_tag("icons/Logout.svg"), destroy_user_session_path) %></li>
 					<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
