@@ -41,15 +41,10 @@ div.top {
 	box-shadow: 0px 1px 2px 0px rgba(0,0,0,0.15);
 }
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Page create account
 header {
 	position: relative;
 	z-index: 5;
 }
-<<<<<<< HEAD
 
 div.container h1 {
 	text-align: center;
@@ -62,28 +57,6 @@ div.container section {
 }
 
 div.container section p {
-=======
-div.container h1{
-	text-align :center;
-=======
-
-div.container h1 {
-	text-align: center;
->>>>>>> Page create account
-}
-
-div.container section {
-	width: 325px;
-	margin: 200px auto;
-	text-align : center;
-}
-
-<<<<<<< HEAD
-div.container section p{
->>>>>>> Sign_in
-=======
-div.container section p {
->>>>>>> Page create account
 	opacity: 0.89;
 	font-family: 'Open Sans', sans-serif;
 	font-size: 14px;
@@ -98,32 +71,6 @@ div.container p.base {
 	width: 200px;
 	margin: 0 auto 45px;
 }
-<<<<<<< HEAD
-
-label.remember {
-	opacity: 0.89;
-	font-family: 'Open Sans', sans-serif;
-	font-size: 14px;
-	color: #545454;
-	line-height: 19px;
-	text-align: center;
-	margin-bottom: 15px;
-}
-
-<<<<<<< HEAD
-div.container section ul li {
-	float: left;
-}
-
-div.container  section ul li a, div.container section div.actions a {
-	font-family: 'Open Sans', sans-serif;
-=======
-	div.container p.base{
-		width : 200px;
-		margin : 0 auto 45px;
-	}
-=======
->>>>>>> Page create account
 
 label.remember {
 	opacity: 0.89;
@@ -139,14 +86,8 @@ div.container section ul li {
 	float: left;
 }
 
-<<<<<<< HEAD
-div.container  section ul li a, div.container section div.actions a{
-	font-family : 'Open Sans', sans-serif;
->>>>>>> Sign_in
-=======
 div.container  section ul li a, div.container section div.actions a {
 	font-family: 'Open Sans', sans-serif;
->>>>>>> Page create account
 	font-weight: 300;
 	color: #FFFFFF;
 	font-size: 12px;
@@ -154,8 +95,6 @@ div.container  section ul li a, div.container section div.actions a {
 	text-decoration: none;
 	background: rgba(0,0,0,0.15);
 	border-radius: 15px;
-<<<<<<< HEAD
-<<<<<<< HEAD
 	padding: 6px 30px;
 }
 
@@ -179,40 +118,6 @@ div.container  section ul li.buttons a#log:hover, div.container section div.acti
 	background: rgba(255,255,255,0.5);
 	cursor: pointer;
 }
-=======
-	padding : 6px 30px;}
-=======
-	padding: 6px 30px;
-}
->>>>>>> Page create account
-
-div.container  section ul li.buttons a.log{
-	margin-right: 17px;
-	border: 1px solid #FFFFFF;
-}
-
-div.container section div.actions a.log{
-	border: 1px solid #FFFFFF;
-
-}
-
-
-div.container  section ul li a#sign, div.container section div.actions a.sign {
-	background-image: linear-gradient(-180deg, #EF4847 0%, #9E2720 100%);
-	box-shadow: 0px 1px 1px 0px rgba(0,0,0,0.30);
-}
-
-<<<<<<< HEAD
-div.container  section ul li.buttons a#sign:hover, div.container section div.actions a.sign:hover{
-  background-image: linear-gradient(-180deg, #EF4847 100%, #9E2720 0%);
-  cursor: pointer;}
->>>>>>> Sign_in
-=======
-div.container  section ul li.buttons a#log:hover, div.container section div.actions a.log:hover {
-	background: rgba(255,255,255,0.5);
-	cursor: pointer;
-}
->>>>>>> Page create account
 
 div.container  section ul li.buttons a#sign:hover, div.container section div.actions a.sign:hover {
 	background-image: linear-gradient(-180deg, #EF4847 100%, #9E2720 0%);
@@ -221,10 +126,6 @@ div.container  section ul li.buttons a#sign:hover, div.container section div.act
 
 div.container footer {
   /*position: absolute;*/
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Page create account
 	left: 0;
 	bottom: 0;
 	height: 30px;
@@ -248,41 +149,16 @@ div.container footer a {
 	margin-bottom: 4px;
 	text-decoration: underline;
 }
-<<<<<<< HEAD
 
 /* HOMEPAGE USER*/
 div.homepage {
-=======
-  left: 0;
-  bottom: 0;
-  height: 30px;
-  width: 100%;
-  margin: 0 auto;
-  text-align:center;
-  font-family: "Open Sans" sans-serif;
-  font-weight: 300 !important;
-  font-size: 12px !important;
-  color: #FFFFFF;
-  line-height: 17px;
-  text-shadow: 0px 1px 2px rgba(0,0,0,0.50);}
-
-div.container footer span{
-  font-weight: 600;
-  text-transform: uppercase;}
-
-div.container footer a{
-  margin-bottom:4px;
-  text-decoration: underline;}
-
-/* HOMEPAGE USER*/
-div.homepage{
->>>>>>> Sign_in
-=======
-
-/* HOMEPAGE USER*/
-div.homepage {
->>>>>>> Page create account
 	background-color: #F6F6F6;
+}
+
+ul.nav {
+	width: 23.5%;
+	float: left;
+	display: inline-flex;
 }
 
 nav ul li {
@@ -316,7 +192,7 @@ nav ul li.right input {
 	background-size: 13px 15px;
 	font-family: 'Open Sans';
 	font-size: 15px;
-	font-weight: 800;
+	font-weight: 600;
 	text-transform: uppercase;
 	color: #B4BBC2;
 	line-height: 20px;
@@ -386,7 +262,6 @@ aside.user span.indicator {
 	font-weight: 400;
 	text-transform: uppercase;
 }
-<<<<<<< HEAD
 
 aside.user span.count {
 	font-family: 'Open Sans';
@@ -401,22 +276,6 @@ aside.user.profile ul.gallery {
 	margin-top: 50px;
 }
 
-=======
-
-aside.user span.count {
-	font-family: 'Open Sans';
-	font-weight: 800;
-	font-size: 20px;
-	color: #EC4746;
-	line-height: 27px;
-}
-
-aside.user.profile ul.gallery {
-	float: left;
-	margin-top: 50px;
-}
-
->>>>>>> Page create account
 aside.user.profile ul.gallery li {
 	display: inline;
 	margin: 0;
@@ -429,27 +288,14 @@ aside.user.profile ul.gallery li img {
 }
 
 /* HOMEPAGE CENTER */
-<<<<<<< HEAD
-<<<<<<< HEAD
 div.homepage section {
 	float: left;
+	width: 46%;
+	background: #F6F6F6;
+	padding: 35px;
 }
 
 div.homepage section div.post {
-=======
-div.homepage section{
-	float : left;
-}
-
-div.homepage section div.post{
->>>>>>> Sign_in
-=======
-div.homepage section {
-	float: left;
-}
-
-div.homepage section div.post {
->>>>>>> Page create account
 	background: #FFFFFF url('icons/icon_pen2.svg') no-repeat 35px 40px;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	font-family: 'Open Sans';
@@ -458,12 +304,9 @@ div.homepage section div.post {
 	color: rgba(179,186,193,0.50);
 	line-height: 20px;
 	height: 100px;
-	width: 700px;
-	margin: 30px 30px 60px 30px;
+	margin-bottom: 35px;
 }
-<<<<<<< HEAD
 
-<<<<<<< HEAD
 div.homepage section div.post p {
 	margin-left: 100px;
 	padding-top: 38px;
@@ -473,9 +316,7 @@ div.homepage section div.feed {
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height: 100%;
-	margin: -30px 30px 30px 30px;
-	width: 620px;
-	padding: 70px 40px;
+	padding: 69px 30px;
 }
 
 div.homepage section div.feed span.letters {
@@ -521,101 +362,11 @@ div.homepage section div.feed ul li {
 }
 
 aside.right_side {
-	width: 336px;
-	position: absolute;
-	right: 0;
-	border-left: 1px;
-	padding-left: 20px;
-=======
-	div.homepage section div.post p{
-		margin-left:100px;
-		padding-top :38px;}
-=======
-
-div.homepage section div.post p {
-	margin-left: 100px;
-	padding-top: 38px;
-}
->>>>>>> Page create account
-
-div.homepage section div.feed {
-	background: #FFFFFF;
-	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
-	height: 100%;
-	margin: -30px 30px 30px 30px;
-	width: 620px;
-	padding: 70px 40px;
-}
-
-div.homepage section div.feed span.letters {
-	font-family: 'Raleway';
-	color: #fff;
-	padding: 20px;
-	background: #D8D8D8;
-	font-size: 12px;
-	letter-spacing: 2px;
-	line-height: 14px;
-	float: left;
-	margin-right: 40px;
-	margin-bottom: 40px;
-}
-
-div.homepage section div.feed p.text,div.homepage section div.feed span.author, div.homepage section div.feed span.date {
-	font-family: 'Open Sans';
-	font-size: 12px;
-	color: #9B9B9B;
-	line-height: 20px;
-	font-weight: 300;
-	width: 600px;
-	margin-bottom: 15px;
-}
-
-div.homepage section div.feed span.hashtag {
-	color: #EC4746;
-	font-weight: 600;
-}
-
-<<<<<<< HEAD
-	div.homepage section div.feed ul{
-		float:right;
-	}
-		div.homepage section div.feed ul li{
-			float :left;
-			padding-right:30px;
-		}
-	
-
-aside.right_side{
-	width:336px;
-	position : absolute;
-	right : 0;
-	border-left : 1px ;
-	padding-left :20px;
->>>>>>> Sign_in
-=======
-div.homepage section div.feed span.author, div.homepage section div.feed span.date {
-	font-weight: 600;
-	padding-top: 30px;
-}
-
-div.homepage section div.feed ul {
+	width: 23.5%;
 	float: right;
-}
-
-div.homepage section div.feed ul li {
-	float: left;
-	padding-right: 30px;
-}
-
-aside.right_side {
-	width: 336px;
-	position: absolute;
-	right: 0;
 	border-left: 1px;
 	padding-left: 20px;
->>>>>>> Page create account
 	background-color: #FFFFFF;
-	box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.15);
 }
 
 aside.right_side h3 {
@@ -676,7 +427,7 @@ aside.right_side ul li a {
 	background: #FFFFFF url('icons/icon_add.svg') no-repeat 5px 6px;
 	position: absolute;
 	margin-top: 4px;
-	margin-left: 35px;
+	right: 22px;
 }
 
 aside.right_side ul li a:hover {
@@ -687,8 +438,9 @@ aside.right_side ul li a:hover {
 /** PROFILE **/
 aside.user.profile {
 	text-align: center;
-	width: 348px;
+	width: 23.5%;
 	padding-top: 50px;
+	float: left;
 }
 
 aside.user.profile img {
@@ -716,22 +468,6 @@ aside.user.profile p.description {
 	color: #FFFFFF;
 	line-height: 18px;
 	font-weight: 300;
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> Page create account
-}
-
-aside.user.profile p.description span.bolder {
-	font-weight: 600;
-<<<<<<< HEAD
-}
-
-aside.user.profile ul {
-	margin-bottom: 40px;
-}
-
-=======
 }
 
 aside.user.profile p.description span.bolder {
@@ -742,15 +478,14 @@ aside.user.profile ul {
 	margin-bottom: 40px;
 }
 
->>>>>>> bf933d2b5f80b8d01f8a30d88426ba2ef247c75a
-=======
+aside.user.profile p.description span.bolder {
+	font-weight: 600;
 }
 
 aside.user.profile ul {
 	margin-bottom: 40px;
 }
 
->>>>>>> Page create account
 aside.user.profile a.side_profile_follow {
 	background: rgba(255,255,255,0.20);
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
@@ -786,13 +521,8 @@ aside.user.profile a.side_profile_follow:hover {
 
 	div.wrapper.create_account{
 		height : 500px;
-<<<<<<< HEAD
 	}
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
->>>>>>> User's feed
 		div.wrapper.create_account + div.actions ul li{
 			width : 100%;
 		}
@@ -801,7 +531,6 @@ aside.user.profile a.side_profile_follow:hover {
 		height : 220px;
 	}
 
-<<<<<<< HEAD
 		div.wrapper.new_password + div.actions.new_password ul li{
 			margin : 0 30px;
 		}
@@ -823,11 +552,7 @@ div.container div.wrapper p, div.wrapper.create_account em {
 		opacity : 0.8;
 	}
 
-=======
-	}
 
-=======
->>>>>>> Page new_password
 	div.wrapper.new_password{
 		height : 220px;
 	}
@@ -852,29 +577,6 @@ div.container div.wrapper p, div.wrapper.create_account em {
 		font-size : 10px;
 		opacity : 0.8;
 	}
-
->>>>>>> bf933d2b5f80b8d01f8a30d88426ba2ef247c75a
-=======
-	}
-
-div.container div.wrapper p, div.wrapper.create_account em {
-	font-weight: 400;
-	text-shadow: none;
-	font-size: 14px;
-	color: #303030;
-	line-height: 19px;
-	padding-top: 25px;
-	padding-bottom: 10px;
-	margin-bottom: 5px;
-	font-family : 'Open Sans', arial;
-}
-
-	div.wrapper.create_account em{
-		font-size : 10px;
-		opacity : 0.8;
-	}
-
->>>>>>> Page create account
 div.container form {
 	text-align: center;
 }
@@ -933,7 +635,6 @@ form input[type="submit"] {
 	padding-right: 25px;
 	border: none;
 	display: inline;
-<<<<<<< HEAD
 }
 
 form input:focus {
@@ -982,89 +683,3 @@ div.container div.actions {
 	margin-top: 30px;
 	margin-left: 4px;
 }
-=======
-/** WRAPPER **/
-#wrapper {
-  display: block;
-  width: 325px;
-  height: 280px;
-  background: #FFFFFF;
-  box-shadow: 0px 0px 29px 0px rgba(0,0,0,0.50);
-  border-radius: 5px;
-  top: 123px;
-  left: 0;
-  right: 0;
-  margin: auto;
-}
-
-div.container #wrapper p{
-  font-weight: 400;
-  text-shadow: none;
-  font-size: 14px;
-  color: #303030;
-  line-height: 19px;
-  padding-top: 25px;
-  padding-bottom: 10px;
-  margin-bottom : 5px;
-}
-
-div.container form{
-	text-align : center;
-=======
->>>>>>> Page create account
-}
-
-form input:focus {
-	outline: 0;
-}
-
-input:focus::-webkit-input-placeholder {
-	color: transparent;
-}
-
-hr {
-	width: 45px;
-	margin-top: 5px;
-	border: 0;
-	height: 0.5px;
-	background-color: rgba(0,0,0,0.3);
-}
-
-.bloc {
-	width: 100%;
-	height: 10px;
-	background: #EF4847;
-	border-radius: 5px 5px 0px 0px;
-}
-
-.inline li {
-	display: inline;
-	padding-top: 35px;
-	padding-right: 10px;
-	padding-left: 10px;
-}
-
-.inline {
-	margin-top: 35px;
-}
-
-form input[type="submit"]:before {
-	content: "";
-	background-image: ('icons/arrow.svg') no-repeat;
-	width: 3px;
-	height: 3px;
-	display: block;
-}
-
-<<<<<<< HEAD
-  div.container div.actions{
-  	margin-top : 30px;
-  	margin-left : 4px;
-  }
->>>>>>> Sign_in
-=======
-div.container div.actions {
-	margin-top: 30px;
-	margin-left: 4px;
-}
->>>>>>> Page create account
