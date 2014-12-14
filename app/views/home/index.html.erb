@@ -23,11 +23,13 @@
 	<div class="homepage">
 		<header>
 			<nav class="top">
-				<ul>
+				<ul class="nav">
 					<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
 					<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
 					<li><%= link_to(image_tag("icons/message.svg"), edit_user_registration_path) %></li>
 					<li><%= link_to(image_tag("icons/bullhorn.svg"), destroy_user_session_path) %></li>
+				</ul>
+				<ul>
 					<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
 					<li class="right input"><input type="text" placeholder="search"></li>
 				</ul>

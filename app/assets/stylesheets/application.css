@@ -155,6 +155,12 @@ div.homepage {
 	background-color: #F6F6F6;
 }
 
+ul.nav {
+	width: 23.5%;
+	float: left;
+	display: inline-flex;
+}
+
 nav ul li {
 	background-image: -webkit-linear-gradient(0deg, #D23F36 0%, #F04848 100%);
 	background-image: -o-linear-gradient(0deg, #D23F36 0%, #F04848 100%);
@@ -186,7 +192,7 @@ nav ul li.right input {
 	background-size: 13px 15px;
 	font-family: 'Open Sans';
 	font-size: 15px;
-	font-weight: 800;
+	font-weight: 600;
 	text-transform: uppercase;
 	color: #B4BBC2;
 	line-height: 20px;
@@ -284,6 +290,9 @@ aside.user.profile ul.gallery li img {
 /* HOMEPAGE CENTER */
 div.homepage section {
 	float: left;
+	width: 46%;
+	background: #F6F6F6;
+	padding: 35px;
 }
 
 div.homepage section div.post {
@@ -295,8 +304,7 @@ div.homepage section div.post {
 	color: rgba(179,186,193,0.50);
 	line-height: 20px;
 	height: 100px;
-	width: 700px;
-	margin: 30px 30px 60px 30px;
+	margin-bottom: 35px;
 }
 
 div.homepage section div.post p {
@@ -308,9 +316,7 @@ div.homepage section div.feed {
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height: 100%;
-	margin: -30px 30px 30px 30px;
-	width: 620px;
-	padding: 70px 40px;
+	padding: 69px 30px;
 }
 
 div.homepage section div.feed span.letters {
@@ -356,13 +362,11 @@ div.homepage section div.feed ul li {
 }
 
 aside.right_side {
-	width: 336px;
-	position: absolute;
-	right: 0;
+	width: 23.5%;
+	float: right;
 	border-left: 1px;
 	padding-left: 20px;
 	background-color: #FFFFFF;
-	box-shadow: 0px 1px 5px 1px rgba(0,0,0,0.15);
 }
 
 aside.right_side h3 {
@@ -423,7 +427,7 @@ aside.right_side ul li a {
 	background: #FFFFFF url('icons/icon_add.svg') no-repeat 5px 6px;
 	position: absolute;
 	margin-top: 4px;
-	margin-left: 35px;
+	right: 22px;
 }
 
 aside.right_side ul li a:hover {
@@ -434,8 +438,9 @@ aside.right_side ul li a:hover {
 /** PROFILE **/
 aside.user.profile {
 	text-align: center;
-	width: 348px;
+	width: 23.5%;
 	padding-top: 50px;
+	float: left;
 }
 
 aside.user.profile img {
