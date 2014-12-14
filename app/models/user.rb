@@ -5,14 +5,14 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  mount_uploader :picture, PictureUploader
+  #mount_uploader :picture, PictureUploader
 
    # Setup accessiblepictureor protected) attributes for your model
   #attr_accessible :picture, :picture_cache, :remove_picture
 
-  validates_presence_of   :picture
-  validates_integrity_of  :picture
-  validates_processing_of :picture
+  #validates_presence_of   :picture
+  #validates_integrity_of  :picture
+  #validates_processing_of :picture
 
   has_many :posts
 
