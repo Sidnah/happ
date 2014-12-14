@@ -468,7 +468,6 @@ aside.user.profile p.description {
 	color: #FFFFFF;
 	line-height: 18px;
 	font-weight: 300;
-<<<<<<< HEAD
 }
 
 aside.user.profile p.description span.bolder {
@@ -479,7 +478,6 @@ aside.user.profile ul {
 	margin-bottom: 40px;
 }
 
-=======
 }
 
 aside.user.profile p.description span.bolder {
@@ -490,7 +488,6 @@ aside.user.profile ul {
 	margin-bottom: 40px;
 }
 
->>>>>>> bf933d2b5f80b8d01f8a30d88426ba2ef247c75a
 aside.user.profile a.side_profile_follow {
 	background: rgba(255,255,255,0.20);
 	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
@@ -557,7 +554,6 @@ div.container div.wrapper p, div.wrapper.create_account em {
 		opacity : 0.8;
 	}
 
-=======
 	}
 
 	div.wrapper.new_password{
@@ -584,8 +580,6 @@ div.container div.wrapper p, div.wrapper.create_account em {
 		font-size : 10px;
 		opacity : 0.8;
 	}
-
->>>>>>> bf933d2b5f80b8d01f8a30d88426ba2ef247c75a
 div.container form {
 	text-align: center;
 }
