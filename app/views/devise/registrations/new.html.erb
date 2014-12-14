@@ -28,6 +28,12 @@
             <li>
               <%= f.password_field :password_confirmation, autocomplete: "off", :placeholder => 'PASSWORD CONFIRMATION' %>
             </li>
+            <span class="picture">
+            <%= f.label :picture do %>
+                <%= f.file_field :picture %>
+                <%= f.hidden_field :picture_cache %>
+            <% end %>
+            </span>
           </ul>
           <div class="actions">
             <%= f.submit "Sign up" %>

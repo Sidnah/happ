@@ -37,7 +37,9 @@
 		</header>
 		<aside class="user profile">
 			<div class="profile_content">
-				<!-- <img src="../assets/images/picture.png" alt=""/> --><%= image_tag("picture.png")%>
+
+				<%= image_tag @user.picture.url if @user.picture? %>
+
 				<h2><span><%= @user.full_name %></span></h2>
 				<p class="username">@<%= @user.happername %></p>
 				<span class="line_under_username">&nbsp;</span>
