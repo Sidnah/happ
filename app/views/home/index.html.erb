@@ -23,10 +23,10 @@
 		<header>
 			<nav class="top">
 				<ul>
-					<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
+					<li><%= link_to(image_tag("icons/house.svg"), root_path) %></li>
 					<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
-					<li><%= link_to(image_tag("icons/Settings.svg"), edit_user_registration_path) %></li>
-					<li><%= link_to(image_tag("icons/Logout.svg"), destroy_user_session_path) %></li>
+					<li><%= link_to(image_tag("icons/settings.svg"), edit_user_registration_path) %></li>
+					<li><%= link_to(image_tag("icons/logout.svg"), destroy_user_session_path) %></li>
 					<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
 					<li class="right input"><input type="text" placeholder="search"></li>
 				</ul>
@@ -91,7 +91,7 @@
 			<article>
 				<h3>Who to follow ?</h3>
 				<ul>
-					<% @users=@users.reject{ |u| u.id==current_user.id } %>
+					<% @users = @users.reject{ |u| u.id==current_user.id } %>
 					<% @users.each do |user| %>
 						<li class="wtf">
 							<%= image_tag("Photo_tweet.svg")%>

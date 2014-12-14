@@ -22,7 +22,6 @@ class PostsController < ApplicationController
     session[:return_to] ||= request.referer
     @post = Post.new(happ_params)
     @post.user_id = current_user.id;
-   
     @post.save
     redirect_to session.delete(:return_to)
   end
@@ -38,7 +37,6 @@ class PostsController < ApplicationController
         redirect_to root_path
       else
         @post.destroy
-        #redirect_to root_path
         redirect_to session.delete(:return_to)
       end
     end

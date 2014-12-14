@@ -2,13 +2,13 @@
 	<header>
 		<nav class="top">
 			<ul>
-				<li><%= link_to(image_tag("icons/House.svg"), root_path) %></li>
-				<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
-				<li><%= link_to(image_tag("icons/Settings.svg"), edit_user_registration_path) %></li>
-				<li><%= link_to(image_tag("icons/Logout.svg"), destroy_user_session_path) %></li>
-				<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
-				<li class="right input"><input type="text" placeholder="search"></li>
-			</ul>
+					<li><%= link_to(image_tag("icons/house.svg"), root_path) %></li>
+					<li><%= link_to(image_tag("icons/user.svg"), show_user_path(current_user.id)) %></li>
+					<li><%= link_to(image_tag("icons/settings.svg"), edit_user_registration_path) %></li>
+					<li><%= link_to(image_tag("icons/logout.svg"), destroy_user_session_path) %></li>
+					<li class="right"><a href="#"><!-- <img src="icons/Icon_pen.svg" alt=""> --><%= image_tag("icons/Icon_pen.svg")%></a></li>
+					<li class="right input"><input type="text" placeholder="search"></li>
+				</ul>
 		</nav>
 		<%= link_to(root_path) do %><div class="top"></div><% end %>
 	</header>
@@ -55,12 +55,14 @@
 				<p class="text"><%= happ.text %> </p>
 				<span class="author"><%= link_to(happ.user.happername, show_user_path(happ.user.id)) %> |</span><span class="date"> <%= happ.created_at %></span>
 				<ul>
-					<li><a href="#"><!-- <img src="icons/respond.svg" alt="Answer"> --><%= image_tag("icons/respond.svg")%></a></li>
-					<li><a href="#"><!-- <img src="icons/retweet.svg" alt="RT"> --><%= image_tag("icons/retweet.svg")%></a></li>
-					<li><a href="#"><!-- <img src="icons/like.svg" alt="Like"> --><%= image_tag("icons/like.svg")%></a></li>
-					<li><%= link_to(image_tag("icons/like.svg"), post_delete_path(happ.id)) %></li>
-				</ul>
-				</ul>
+						<li><%= link_to(image_tag("icons/respond.svg")) %></li>
+						<li><%= link_to(image_tag("icons/like.svg")) %></li>
+						<% if current_user.id==happ.user.id %>
+							<li><%= link_to(image_tag("icons/trash.svg"), post_delete_path(happ.id)) %></li>
+						<% else %>
+							<li><a href="#"><%= image_tag("icons/retweet.svg")%></a></li>
+						<% end %>
+					</ul>
 			</div>
 		<% end %>
 
