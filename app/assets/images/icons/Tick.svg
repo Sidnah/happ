@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="47px" height="43px" viewBox="0 0 47 43" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.1.1 (8761) - http://www.bohemiancoding.com/sketch -->
+    <title>Tick</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <g id="Landing_Page_Login_2/2" sketch:type="MSArtboardGroup" transform="translate(-695.000000, -399.000000)" stroke="#7ED321" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+            <g id="CENTER" sketch:type="MSLayerGroup" transform="translate(558.000000, 145.000000)">
+                <g id="Login_card" transform="translate(0.000000, 148.000000)" sketch:type="MSShapeGroup">
+                    <path d="M156.182052,107.556014 L173.498383,143.245929 L156.182052,151.022842" id="Tick" transform="translate(164.840218, 129.289428) rotate(-300.000000) translate(-164.840218, -129.289428) "></path>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
