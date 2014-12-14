@@ -92,8 +92,9 @@
 				</ul>
 			</article>
 			<article>
-				<h3>Who to follow ?</h3>
+				<h3>Top Happers</h3>
 				<ul>
+					<% @users=@users.sort { |a,b| b.followers.count <=> a.followers.count } %>
 					<% @users=@users.reject{ |u| u.id==current_user.id } %>
 					<% @users.each do |user| %>
 						<li class="wtf">
