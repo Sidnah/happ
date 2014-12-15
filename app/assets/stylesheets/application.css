@@ -341,9 +341,15 @@ div.homepage section div.feed span.author a:hover{
 		color:#EC4746;
 	}
 
-div.user {
-	padding: 33px;
+div.users_list .user {
+	padding: 33px !important;
 }
+.users_list h2 {
+	font-family: 'Open Sans';
+	margin-bottom: 30px;
+	color:	#B4BBC2; 
+}
+
 .users_list {
 	width: 100%;
 }

@@ -1,12 +1,12 @@
 <% provide(:title, @title) %>
     <% if @users.any? %>
       <div class="users_list">
+        <h2> <%= @title %></h2>
         <% @users.each do |user| %>
           <div class="feed user">
             <span class="letters">AG</span>
             <span class="author"><%= link_to(user.full_name, show_user_path(user.id)) %></span><br>
             <span class="username">@<%= user.happername %></span><br>
-            <div class="unfollow"><%= link_to("Unfollow", show_user_path(user.id))%></div>
             <p class="description">bla</p>
           </div>
         <% end %>
