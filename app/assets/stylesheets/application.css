@@ -318,10 +318,15 @@ div.homepage section div.post textarea{
 		border: none;
 		outline: none;
 		resize: none;
-		width: 80%;
+		width: 78%;
 		font-size: 12px;
 		font-family: 'Open Sans';
 	}
+
+div.homepage section div.post input[disabled=disabled]{
+	color: #000;
+	background:#dddddd;
+}
 
 div.homepage section div.feed {
 	background: #FFFFFF;

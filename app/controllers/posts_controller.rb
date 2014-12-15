@@ -2,14 +2,13 @@ class PostsController < ApplicationController
 
   def index
   	@posts = Post.all
-    @posts = @posts.reverse
     @users = User.all
     @user = current_user
 
     if params[:search]
-      @happs = Post.search(params[:search]).order("created_at DESC")
+      @happs = Post.search(params[:search])
     else
-      @happs = Post.order("created_at DESC")
+      @happs = Post
     end
 
     @hashtags_array = []

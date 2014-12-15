@@ -1,3 +1,4 @@
+<% @happs = @happs.reverse %>
 <% @happs.each do |happ|%>
 	<% happ.text.gsub!(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/){ "<a class=hashtag href=posts?utf8=✓&search="+$1+">#"+$1+"</a>" }
 	%>

@@ -4,7 +4,6 @@ class UsersController < ApplicationController
   	@user = User.find(params[:id])
   	@users = User.all
 	@posts = @user.posts
-	@posts = @posts.reverse
 
 	@hashtags_array = []
 			@feed_items = current_user.feed

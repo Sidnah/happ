@@ -7,7 +7,6 @@
 				<li><%= link_to(image_tag("icons/Logout.svg"), destroy_user_session_path) %></li>
 			</ul>
 			<ul>
-				<li class="right"><a href="#"><%= image_tag("icons/Icon_pen.svg")%></a></li>
 				<li class="right input">
 					<%= form_tag(posts_path, :method => "get", class: "", id: "search-form") do %>
 			      		<%= text_field_tag :search, params[:search], class: "", placeholder: "Search in happs" %>
