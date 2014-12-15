@@ -3,7 +3,7 @@
 				<h3>Trending topics</h3>
 				<ul>
 					<% @sorted_hashtags.each do |key, value| %>
-						<li class="trending"><a href="posts?search=<%=key%>">#<%= key %></a><br/></li>
+						<li class="trending"><a href="../../posts?search=<%=key%>">#<%= key %></a><br/></li>
 					<% end %>
 
 				</ul>
