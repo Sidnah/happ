@@ -82,14 +82,15 @@
 			<h3>Who to follow ?</h3>
 			<ul>
 				<%@users.each do |user| %>
-				<li class="wtf">
-					<%= image_tag("Photo_tweet.svg")%>
-					<p><%= user.full_name %><br/>
-						<span class="pseudo">@<%= user.happername %></span></p>
-						<%= link_to("Follow", show_user_path(user.id))%>
-					</li>
+					<li class="wtf">
+			            <%= image_tag("Photo_tweet.svg")%>
+			            <p class="author"><%= link_to(user.full_name, show_user_path(user.id)) %><br/>
+			              <span class="pseudo">@<%= user.happername %></span>
+			            </p>
+			        </li>
 					<% end %>
 				</ul>
+				
 			</article>
 		</aside>
 	</div>

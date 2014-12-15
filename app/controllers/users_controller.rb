@@ -17,16 +17,18 @@ class UsersController < ApplicationController
   def following
   	@title = "Following"
     @user  = User.find(params[:id])
-    @all =  User.where.not(id: current_user.id)
-    @users = @user.following
+    @users = @user.following.where.not(:id => current_user.id)
+    @notfollowed = @user.following.where.not(:id => current_user.id)
+    @all = User.where.not(:id => current_user.id).where.not(:id => @notfollowed)
     render 'show_follow'
   end
 
   def followers
   	@title = "Followers"
     @user  = User.find(params[:id])
-    @all =  User.where.not(id: current_user.id)
-    @users = @user.followers
+    @users = @user.followers.where.not(:id => current_user.id)
+    @notfollowed = @user.following.where.not(:id => current_user.id)
+    @all = User.where.not(:id => current_user.id).where.not(:id => @notfollowed)
     render 'show_follow'
   end
 

@@ -147,6 +147,7 @@ div.container footer span {
 div.container footer a {
 	margin-bottom: 4px;
 	text-decoration: underline;
+	color: #FFFFFF;
 }
 
 /* HOMEPAGE USER*/
@@ -320,6 +321,24 @@ div.homepage section div.feed, section .user {
 section .user {
 	padding: 33px;
 }
+#follow_form input {
+	/* Rectangle 39: */
+	background: rgba(255,255,255,0.20);
+	box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.10);
+	border-radius: 40px;
+	border: 0;
+	color: white;
+	letter-spacing: 2px;
+	font-family: 'Open Sans';
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 13px 32px;
+	cursor: pointer;
+}
+#follow_form input:hover {
+	background: rgba(255,255,255,0.30);
+}
+
 .users_list .author a{
 	color: #545454
 }
@@ -344,10 +363,14 @@ section .user {
 	text-align: center;
 	margin-top: -30px;
 }
-.users_list .unfollow a {
+.users_list .unfollow input {
 	color: #fff;
 	font-family: 'Open Sans';
 	font-weight: 300;
+	background: none;
+	border: 0;
+	font-size: 12px;
+	padding: 0;
 }
 section div.feed span.letters {
 	font-family: 'Raleway';
@@ -430,7 +453,7 @@ aside.right_side ul li img {
 	margin-right: 20px;
 }
 
-aside.right_side ul li p {
+aside.right_side ul li p, aside.right_side ul li p.author a {
 	font-family: 'Open Sans';
 	font-size: 12px;
 	color: #545454;
@@ -442,7 +465,7 @@ aside.right_side ul li span.pseudo {
 	color: #B9B9B9;
 }
 
-aside.right_side ul li a {
+aside.right_side ul li .follow .side_profile_follow {
 		/*float : right;*/
 	font-family: 'Open Sans';
 	font-size: 11px;
@@ -459,8 +482,11 @@ aside.right_side ul li a {
 	margin-top: 4px;
 	right: 22px;
 }
+aside.right_side ul li .follow .side_profile_follow a {
+	color: #EC4746;
+}
 
-aside.right_side ul li a:hover {
+aside.right_side ul li .follow .side_profile_follow:hover {
 	background: rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
 	cursor: pointer;
 }
@@ -650,7 +676,7 @@ form input[type="button"] {
 	padding-right: 17px;
 }
 
-form input[type="submit"] {
+form input[type="submit"].not(div.follow form input[type="submit"]) {
 	color: #FFF;
 	font-family: 'Open Sans', arial, sans-serif !important;
 	font-size: 12px;

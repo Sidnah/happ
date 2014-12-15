@@ -52,7 +52,7 @@
             <span class="letters">AG</span>
             <span class="author"><%= link_to(user.full_name, show_user_path(user.id)) %></span><br>
             <span class="username">@<%= user.happername %></span><br>
-            <div class="unfollow"><%= link_to("Unfollow", show_user_path(user.id))%></div>
+            
             <p class="description">bla</p>
           </div>
         <% end %>
@@ -74,15 +74,17 @@
     <article>
       <h3>Who to follow ?</h3>
       <ul>
-        <%@all.each do |user| %>
-        <li class="wtf">
-          <%= image_tag("Photo_tweet.svg")%>
-          <p><%= user.full_name %><br/>
-            <span class="pseudo">@<%= user.happername %></span>
-          </p>
-          <%= link_to("Follow", show_user_path(user.id))%>
-        </li>
-        <% end %>
+        <% @all.each do |user| %>
+          <li class="wtf">
+            <%= image_tag("Photo_tweet.svg")%>
+            <p class="author"><%= link_to(user.full_name, show_user_path(user.id)) %><br/>
+              <span class="pseudo">@<%= user.happername %></span>
+            </p>
+            <div class="follow">
+              <%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>
+            </div>
+          </li>
+          <% end %>
       </ul>
     </article>
   </aside>
