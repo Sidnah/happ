@@ -289,7 +289,7 @@ aside.user.profile ul.gallery li img {
 }
 
 /* HOMEPAGE CENTER */
-div.homepage section, .users_list {
+div.homepage section {
 	float: left;
 	width: 46%;
 	background: #F6F6F6;
@@ -327,7 +327,7 @@ div.homepage section div.post input[disabled=disabled]{
 	background:#dddddd;
 }
 
-div.homepage section div.feed, section .user {
+div.homepage section div.feed, div.user {
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height: 100%;
@@ -341,8 +341,11 @@ div.homepage section div.feed span.author a:hover{
 		color:#EC4746;
 	}
 
-section .user {
+div.user {
 	padding: 33px;
+}
+.users_list {
+	width: 100%;
 }
 .users_list .author a{
 	color: #545454
