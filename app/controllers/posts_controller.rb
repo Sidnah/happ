@@ -26,7 +26,6 @@ class PostsController < ApplicationController
 
       @sorted_hashtags = Hash[@hashtags_hash.sort_by{|k, v| v}.reverse]
 
-
   end
 
    def show
