@@ -5,14 +5,28 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
-
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </head>
-<body>
-	<!-- <h1>In application.html.erb</h1> -->
+<body><% if current_user != nil %>
+	<div class="homepage">
+	
+		<%= render 'layouts/header' %>
+		<%= render 'layouts/left' %>
+		<section>
+		<div class="post">
+			<%= render 'posts/new' %>
+		</div>
+		<%= yield %>
+	</section>
+		<% if @sorted_hashtags != nil %>
+		<%= render 'layouts/right' %>
+		<% end %>
+		
+</div>
+<% else %>	
+<%= yield %>	
+	<% end %>
 
-<%= yield %>
+
 
 </body>
 </html>

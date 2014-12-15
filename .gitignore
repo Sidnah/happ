@@ -36,3 +36,7 @@ bower.json
 *.log
 
 *.sqlite3
+
+log/development.log
+
+*.log

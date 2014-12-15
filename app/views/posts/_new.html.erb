@@ -2,11 +2,31 @@
 
 	<%= form_for :post, url: posts_path do |f| %>
 	  <p>
-	    <%= f.text_area :text, :placeholder => 'What\'s happening ?' %>
-	    <%= f.submit %>
+	    <%= f.text_area :text, :placeholder => 'What\'s happening ?', :class =>"happ_field" %>
+	    <%= f.submit "Send", :class =>"btn_send" %>
+	    <span class="characters_count"></span>
 	  </p>
 	<% end %>
 
 <% else %>
 	<p> You need to <%= link_to('login', new_user_session_path)  %>.<p>
 <% end %>
+
+<script type="text/javascript">
+	var max = 140;
+	var counter = $(".characters_count");
+	var field = $(".happ_field");
+	var btn = $(".btn_send"); 
+	var fig = max;
+	counter.append(max);
+
+	field.keyup(function(){
+		fig = max-field.val().length;
+		counter.html(fig);
+		if(fig<0){
+			btn.attr("disabled", "disabled");
+		}else
+			btn.removeAttr("disabled");
+	});
+	
+</script>

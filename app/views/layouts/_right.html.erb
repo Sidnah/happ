@@ -1,0 +1,45 @@
+<aside class="right_side">
+			<article class="trendings">
+				<h3>Trending topics</h3>
+				<ul>
+					<% @sorted_hashtags.each do |key, value| %>
+						<li class="trending"><a href="posts?search=<%=key%>">#<%= key %></a><br/></li>
+					<% end %>
+
+				</ul>
+
+			</article>
+
+			<article class="recommandations">
+
+				<h3>Top Happers</h3>
+				<ul>
+					<% @users=@users.reject{ |u| u.id==current_user.id } %>
+					<% @users.each do |user| %>
+						<li class="wtf">
+							<%= image_tag("Photo_tweet.svg")%>
+							<p><%= user.full_name %><br/>
+								<span class="pseudo"><%= link_to("@"+user.happername, show_user_path(user.id))%></span></p>
+								<div id="follow_form">
+							  <% if current_user.following?(user) %>
+							    <%= form_for(current_user.active_relationships.find_by(followed_id: user.id),
+								             html: { method: :delete },
+								             remote: true) do |f| %>
+									<%= f.submit "Unfollow", class: "btn side_profile_follow" %>
+									<%= user.id %>
+								<% end %>
+							  <% else %>
+							    <%= form_for(current_user.active_relationships.
+								                          build(followed_id: user.id),
+								                          remote: true) do |f| %>
+								  <div><%= hidden_field_tag :followed_id, user.id %></div>
+								  <%= f.submit "Follow", class: "btn btn-primary side_profile_follow" %>
+								  <%= user.id %>
+								<% end %>
+							  <% end %>
+							 </div>
+						</li>
+					<% end %>
+				</ul>
+			</article>
+		</aside>
