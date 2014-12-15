@@ -21,7 +21,9 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 @import url(http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,700,300,600,800,400);
 @import url(http://fonts.googleapis.com/css?family=Raleway:800);
 
-
+html, body{
+	height: 100%;
+}
 div.container {
 	background: url("Background.png") center fixed;
 	-webkit-background-size: cover;
@@ -51,7 +53,7 @@ div.container h1 {
 
 div.container section {
 	width: 325px;
-	margin: 200px auto;
+	margin: 20px auto;
 	text-align : center;
 }
 
@@ -98,13 +100,11 @@ div.container  section ul li a, div.container section div.actions a {
 }
 
 div.container  section ul li.buttons a.log{
-	margin-right: 17px;
 	border: 1px solid #FFFFFF;
 }
 
 div.container section div.actions a.log{
 	border: 1px solid #FFFFFF;
-
 }
 
 
@@ -124,8 +124,7 @@ div.container  section ul li.buttons a#sign:hover, div.container section div.act
 }
 
 div.container footer {
-  /*position: absolute;*/
-	left: 0;
+  	position: absolute;
 	bottom: 0;
 	height: 30px;
 	width: 100%;
@@ -137,6 +136,10 @@ div.container footer {
 	color: #FFFFFF;
 	line-height: 17px;
 	text-shadow: 0px 1px 2px rgba(0,0,0,0.50);
+}
+
+div.container footer a {
+	color: #FFFFFF;
 }
 
 div.container footer span {
@@ -538,7 +541,9 @@ aside.right_side ul li p {
 	float: left;
 }
 
-aside.right_side article.recommandations ul li a.follow{
+aside.right_side article.recommandations ul li input{
+	position: absolute;
+	right: 22px;
 	font-family: 'Open Sans';
 	font-size: 11px;
 	color: #EC4746;
@@ -553,9 +558,10 @@ aside.right_side article.recommandations ul li a.follow{
 	position:absolute;
 	margin-top : 4px;
 	margin-left : 35px;
+	box-shadow: none;
 	}
 
-	aside.right_side article.recommandations ul li a.follow:hover{
+	aside.right_side article.recommandations ul li input:hover{
 		background : rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
 		cursor :pointer;
 }
