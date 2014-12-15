@@ -2,6 +2,7 @@ class HomeController < ActionController::Base
 
 	def index
 
+
 		if current_user
 
 			@users = User.all
@@ -22,6 +23,8 @@ class HomeController < ActionController::Base
 			@hashtags_hash = @hashtags_array.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
 
 			@sorted_hashtags = Hash[@hashtags_hash.sort_by{|k, v| v}.reverse]
+
+			render layout: "application"
 
 		else
 			redirect_to user_session_path	

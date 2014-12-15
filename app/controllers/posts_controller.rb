@@ -3,13 +3,29 @@ class PostsController < ApplicationController
   def index
   	@posts = Post.all
     @posts = @posts.reverse
+    @users = User.all
     @user = current_user
 
     if params[:search]
-      @articles = Post.search(params[:search]).order("created_at DESC")
+      @happs = Post.search(params[:search]).order("created_at DESC")
     else
-      @articles = Post.order("created_at DESC")
+      @happs = Post.order("created_at DESC")
     end
+
+    @hashtags_array = []
+      @feed_items = current_user.feed
+
+      hashtags = Post.all
+      hashtags = hashtags.each do |happ|
+        happ.text = happ.text.scan(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/)
+        happ.text.each do |l|
+          @hashtags_array.push(l[0])
+        end
+      end
+
+      @hashtags_hash = @hashtags_array.inject(Hash.new(0)) { |h,v| h[v] += 1; h }
+
+      @sorted_hashtags = Hash[@hashtags_hash.sort_by{|k, v| v}.reverse]
 
 
   end
@@ -27,6 +43,7 @@ class PostsController < ApplicationController
   end
 
   def create
+    @posts = Post.all
     session[:return_to] ||= request.referer
     @post = Post.new(happ_params)
     @post.user_id = current_user.id;
@@ -34,7 +51,7 @@ class PostsController < ApplicationController
 
     @feed_items = []
     
-    redirect_to @post
+    redirect_to root_path
 
   end
 
