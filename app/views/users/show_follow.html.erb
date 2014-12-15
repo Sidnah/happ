@@ -4,10 +4,10 @@
         <h2> <%= @title %></h2>
         <% @users.each do |user| %>
           <div class="feed user">
-            <span class="letters">AG</span>
+            <span class="letters"><%= user.happername.chars.first %></span>
             <span class="author"><%= link_to(user.full_name, show_user_path(user.id)) %></span><br>
             <span class="username">@<%= user.happername %></span><br>
-            <p class="description">bla</p>
+            <p class="description"><%= user.bio %></p>
           </div>
         <% end %>
       </div>

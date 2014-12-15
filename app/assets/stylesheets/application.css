@@ -357,6 +357,7 @@ div.users_list .user {
 	color: #545454
 }
 .users_list .username {
+	font-family: 'Open Sans';
 	color: #9B9B9B;
 }
 .users_list p.description{
@@ -421,6 +422,35 @@ div.homepage section div.feed ul {
 div.homepage section div.feed ul li {
 	float: left;
 	padding-right: 30px;
+}
+
+div.homepage div.edit_user {
+	font-family: "Open Sans"
+}
+
+div.homepage div.edit_user input, div.homepage div.edit_user textarea{
+	margin : 10px 0 15px 0;
+}
+
+div.homepage div.edit_user input[type=text],div.homepage div.edit_user input[type=password],div.homepage div.edit_user input[type=email]{
+	background: white;
+	border : 1px solid #dddddd;
+	border-radius: 0;
+}
+
+div.homepage div.edit_user textarea{
+	border : 1px solid #dddddd;
+	outline: none;
+	font-family: "Open Sans";
+	font-size: 12px;
+	resize: none;
+	margin-top: 10px;
+	width : 30%;
+	height:60px;
+}
+
+div.homepage div.edit_user hr{
+	float: left;
 }
 
 aside.right_side {

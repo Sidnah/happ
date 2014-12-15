@@ -2,7 +2,7 @@
 <% @feed_items.each do |happ|%>
 	<% happ.text.gsub!(/(?:(?<=\s)|^)#(\w*[A-Za-z_]+\w*)/){ "<a class=hashtag href=posts?utf8=✓&search="+$1+">#"+$1+"</a>" } %>
 	<div class="feed">
-		<span class="letters">AG</span>
+		<span class="letters"><%= happ.user.happername.chars.first %></span>
 		<p class="text"><%= raw(happ.text) %> </p>
 		<span class="author"> <%= link_to(happ.user.happername, show_user_path(happ.user.id)) %>|</span><span class="date"> <%= happ.created_at %></span>
 		<ul>
