@@ -1,0 +1,22 @@
+<aside class="user profile">
+	<div class="profile_content">
+
+		<%= image_tag @user.picture.url if @user.picture? %>
+
+		<h2><span><%= @user.full_name %></span></h2>
+		<p class="username">@<%= @user.happername %></p>
+		<span class="line_under_username">&nbsp;</span>
+		<p class="description"><%= @user.bio %></p>
+		<br/>
+		<br/>
+		<ul>
+			<li><span class="indicator">Happs</span><br/><span class="count"> <%= @user.posts.count %> </span></li>
+			<% if @user ||= current_user %>
+				<%= render 'shared/stats' %>
+			<% end %>
+		</ul>
+		<% if current_user != @user %>
+		<%= render 'follow_form' if user_signed_in? && @user.id != current_user.id %>				
+		<% end %>
+	</div>
+</aside>

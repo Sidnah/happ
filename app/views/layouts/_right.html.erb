@@ -1,0 +1,29 @@
+<aside class="right_side">
+			<article class="trendings">
+				<h3>Trending topics</h3>
+				<ul>
+					<% @sorted_hashtags.each do |key, value| %>
+						<li class="trending"><a href="posts?search=<%=key%>">#<%= key %></a><br/></li>
+					<% end %>
+
+				</ul>
+
+			</article>
+
+			<article class="recommandations">
+
+				<h3>Top Happers</h3>
+				<ul>
+					<% @users=@users.sort { |a,b| b.followers.count <=> a.followers.count } %>
+					<% @users=@users.reject{ |u| u.id==current_user.id } %>
+					<% @users.each do |user| %>
+						<li class="wtf">
+							<%= image_tag("Photo_tweet.svg")%>
+							<p><%= user.full_name %><br/>
+								<span class="pseudo">@<%= user.happername %></span></p>
+								<%= link_to("Follow", show_user_path(user.id))%>
+						</li>
+					<% end %>
+				</ul>
+			</article>
+		</aside>
