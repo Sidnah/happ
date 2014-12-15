@@ -425,32 +425,79 @@ div.homepage section div.feed ul li {
 }
 
 div.homepage div.edit_user {
-	font-family: "Open Sans"
+	font-family: "Open Sans";
+	font-weight: 300;
+	color:#999999;
+	padding-left: 5%;
 }
+
+div.homepage div.edit_user h2 {
+	font-size: 18px;
+}
+
+div.homepage div.edit_user h2 + p {
+	margin-bottom: 30px;
+}
+
+div.homepage div.edit_user label {
+	font-size: 14px;
+	color: #B4BBC2;
+	width: 20%;
+	float: left;
+	line-height: 44px;
+}
+
+div.homepage div.edit_user div.field {
+	width: 100%;
+}
+
 
 div.homepage div.edit_user input, div.homepage div.edit_user textarea{
 	margin : 10px 0 15px 0;
+	color: #B4BBC2;
+}
+
+div.homepage div.edit_user input[type=submit]{
+	margin : 10px 0 15px 0;
+	color: white;
+	border-radius: 1px;
 }
 
 div.homepage div.edit_user input[type=text],div.homepage div.edit_user input[type=password],div.homepage div.edit_user input[type=email]{
 	background: white;
-	border : 1px solid #dddddd;
+	border : 1px solid #B4BBC2;
 	border-radius: 0;
+	height: 27px;
+	width: 300px;
+	font-weight: 300;
+	text-align: left;
+	padding-left: 10px;
+	text-transform: none;
+	letter-spacing: normal;
+	color: #000000;
 }
 
 div.homepage div.edit_user textarea{
-	border : 1px solid #dddddd;
+	border : 1px solid #B4BBC2;
 	outline: none;
 	font-family: "Open Sans";
 	font-size: 12px;
+	font-weight: 300;
 	resize: none;
 	margin-top: 10px;
-	width : 30%;
+	width : 300px;
 	height:60px;
+	color: #000000;
 }
 
 div.homepage div.edit_user hr{
 	float: left;
+}
+
+div.homepage div.edit_user i{
+	font-style: italic;
+	font-size: 10px;
+	color: #cccccc;
 }
 
 aside.right_side {
@@ -491,32 +538,37 @@ aside.right_side ul li p {
 	float: left;
 }
 
-aside.right_side ul li span.pseudo {
-	color: #B9B9B9;
+aside.right_side article.recommandations ul li a.follow{
+	font-family: 'Open Sans';
+	font-size: 11px;
+	color: #EC4746;
+	letter-spacing: 0.45px;
+	line-height: 15px;
+	font-weight: 600;
+	text-transform: uppercase;
+	padding: 5px 10px 5px 23px;
+	border: 1px solid #EC4746;
+	border-radius: 3px;
+	background :#FFFFFF url('icons/icon_add.svg') no-repeat 5px 6px;
+	position:absolute;
+	margin-top : 4px;
+	margin-left : 35px;
+	}
+
+	aside.right_side article.recommandations ul li a.follow:hover{
+		background : rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
+		cursor :pointer;
+}
+		
+aside.right_side article.recommandations ul li span.pseudo a{
+	color: #aaaaaa;
 }
 
-aside.right_side article.recommandations ul li a{
-		/*float : right;*/
-		font-family: 'Open Sans';
-		font-size: 11px;
-		color: #EC4746;
-		letter-spacing: 0.45px;
-		line-height: 15px;
-		font-weight: 600;
-		text-transform: uppercase;
-		padding: 5px 10px 5px 23px;
-		border: 1px solid #EC4746;
-		border-radius: 3px;
-		background :#FFFFFF url('icons/icon_add.svg') no-repeat 5px 6px;
-		position:absolute;
-		margin-top : 4px;
-		margin-left : 35px;}
+aside.right_side article.recommandations ul li span.pseudo a:hover{
+	cursor :pointer;
+	color: #EC4746;
+}
 
-		aside.right_side article.recommandations ul li a:hover{
-			background : rgba(236, 71, 70, 0.5) url('icons/icon_add.svg') no-repeat 5px 6px;
-			cursor :pointer;
-		}
-		
 aside.right_side li.trending {
 	font-family: 'Open Sans';
 	font-size: 12px;
@@ -526,16 +578,23 @@ aside.right_side li.trending {
 	margin-bottom: 5px;
 }
 
-		aside.right_side article.trendings ul li{
-			color:#B9B9B9;
-			
-		}
+aside.right_side article.trendings ul li{
+	color:#B9B9B9;
+	
+}
 
-		aside.right_side article.trendings ul li a{
-			color:#EC4746;
-			font-weight: 600
-			
-		}
+aside.right_side article.trendings ul li a{
+	color:#EC4746;
+	font-weight: 600
+	
+}
+
+div.homepage section h2.research_not_found{
+	font-family: "Open Sans";
+	font-size: 18px;
+	font-weight: 400;
+	color: #aaaaaa;
+}
 
 
 

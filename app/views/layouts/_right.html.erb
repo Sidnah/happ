@@ -20,8 +20,8 @@
 						<li class="wtf">
 							<%= image_tag("Photo_tweet.svg")%>
 							<p><%= user.full_name %><br/>
-								<span class="pseudo">@<%= user.happername %></span></p>
-								<%= link_to("Follow", show_user_path(user.id))%>
+								<span class="pseudo"><%= link_to(user.happername, show_user_path(user.id))%></span></p>
+								<%= link_to("Follow", show_user_path(user.id), :class=>"follow")%>
 						</li>
 					<% end %>
 				</ul>
