@@ -31,7 +31,6 @@ div.container {
 
 a {
 	text-decoration: none;
-	color: white;
 }
 
 div.top {
@@ -290,7 +289,7 @@ aside.user.profile ul.gallery li img {
 }
 
 /* HOMEPAGE CENTER */
-div.homepage section {
+div.homepage section, .users_list {
 	float: left;
 	width: 46%;
 	background: #F6F6F6;
@@ -328,7 +327,7 @@ div.homepage section div.post input[disabled=disabled]{
 	background:#dddddd;
 }
 
-div.homepage section div.feed {
+div.homepage section div.feed, section .user {
 	background: #FFFFFF;
 	box-shadow: 0px 1px 5px 0px rgba(0,0,0,0.15);
 	height: 100%;
@@ -342,7 +341,39 @@ div.homepage section div.feed span.author a:hover{
 		color:#EC4746;
 	}
 
-div.homepage section div.feed span.letters {
+section .user {
+	padding: 33px;
+}
+.users_list .author a{
+	color: #545454
+}
+.users_list .username {
+	color: #9B9B9B;
+}
+.users_list p.description{
+	color: #8D8D8D;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	margin-top: 8px;
+	display: block;
+}
+.users_list .unfollow {
+	/* Rectangle 272: */
+	background-image: linear-gradient(0deg, #D23F36 0%, #F04848 100%);
+	border-radius: 3px;
+	padding: 10px 20px;
+	width: 88px;
+	display: inline-block;
+	float: right;
+	text-align: center;
+	margin-top: -30px;
+}
+.users_list .unfollow a {
+	color: #fff;
+	font-family: 'Open Sans';
+	font-weight: 300;
+}
+section div.feed span.letters {
 	font-family: 'Raleway';
 	color: #fff;
 	padding: 20px;
